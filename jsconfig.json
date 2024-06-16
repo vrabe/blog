@@ -11,6 +11,6 @@
 			"@/site-config": ["src/site.config.js"]
 		}
 	},
-	"include": ["./.eslintrc.cjs", "**/*"],
+	"include": ["**/*"],
 	"exclude": ["node_modules", "**/node_modules/*", ".vscode", "dist"]
 }
