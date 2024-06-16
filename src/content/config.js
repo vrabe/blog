@@ -1,6 +1,6 @@
 import { defineCollection, z } from "astro:content";
 
-function removeDupsAndLowerCase(array: string[]) {
+function removeDupsAndLowerCase(array) {
 	if (!array.length) return array;
 	const lowercaseItems = array.map((str) => str.toLowerCase());
 	const distinctItems = new Set(lowercaseItems);

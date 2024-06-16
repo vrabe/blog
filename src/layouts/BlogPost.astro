@@ -1,15 +1,9 @@
 ---
-import type { CollectionEntry } from "astro:content";
-
 import BlogHero from "@/components/blog/Hero.astro";
 import TOC from "@/components/blog/TOC.astro";
 import WebMentions from "@/components/blog/webmentions/index.astro";
 
 import BaseLayout from "./Base.astro";
-
-interface Props {
-	post: CollectionEntry<"post">;
-}
 
 const { post } = Astro.props;
 const {
@@ -55,10 +49,10 @@ const { headings } = await post.render();
 </BaseLayout>
 
 <script>
-	const scrollBtn = document.getElementById("to-top-btn") as HTMLButtonElement;
-	const targetHeader = document.getElementById("blog-hero") as HTMLDivElement;
+	const scrollBtn = document.getElementById("to-top-btn");
+	const targetHeader = document.getElementById("blog-hero");
 
-	function callback(entries: IntersectionObserverEntry[]) {
+	function callback(entries) {
 		entries.forEach((entry) => {
 			// only show the scroll to top button when the heading is out of view
 			scrollBtn.dataset.show = (!entry.isIntersecting).toString();

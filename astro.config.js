@@ -54,7 +54,7 @@ export default defineConfig({
 	},
 });
 
-function rawFonts(ext: string[]) {
+function rawFonts(ext) {
 	return {
 		name: "vite-plugin-raw-fonts",
 		// @ts-expect-error:next-line

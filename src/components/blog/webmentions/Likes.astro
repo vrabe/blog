@@ -1,11 +1,5 @@
 ---
-import type { WebmentionsChildren } from "@/types";
-
 import { Image } from "astro:assets";
-
-interface Props {
-	mentions: WebmentionsChildren[];
-}
 
 const { mentions } = Astro.props;
 const MAX_LIKES = 10;

@@ -1,8 +1,8 @@
-export function toggleClass(element: HTMLElement, className: string) {
+export function toggleClass(element, className) {
 	element.classList.toggle(className);
 }
 
-export function elementHasClass(element: HTMLElement, className: string) {
+export function elementHasClass(element, className) {
 	return element.classList.contains(className);
 }
 

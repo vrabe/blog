@@ -30,21 +30,7 @@
 		"@resvg/resvg-js": "^2.6.2",
 		"@tailwindcss/aspect-ratio": "^0.4.2",
 		"@tailwindcss/typography": "^0.5.13",
-		"@types/eslint": "^8.56.10",
-		"@typescript-eslint/eslint-plugin": "^7.13.0",
-		"@typescript-eslint/parser": "^7.13.0",
-		"astro-eslint-parser": "^1.0.2",
 		"autoprefixer": "^10.4.19",
-		"eslint": "^9.5.0",
-		"eslint-import-resolver-typescript": "^3.6.1",
-		"eslint-plugin-astro": "^1.2.2",
-		"eslint-plugin-deprecation": "^3.0.0",
-		"eslint-plugin-import": "^2.29.1",
-		"eslint-plugin-jsx-a11y": "^6.8.0",
-		"eslint-plugin-markdown": "^5.0.0",
-		"eslint-plugin-perfectionist": "^2.11.0",
-		"eslint-plugin-regexp": "^2.6.0",
-		"eslint-plugin-typescript-sort-keys": "^3.2.0",
 		"mdast-util-to-string": "^4.0.0",
 		"pagefind": "^1.1.0",
 		"postcss": "^8.4.38",
@@ -55,7 +41,6 @@
 		"prettier-plugin-tailwindcss": "^0.6.4",
 		"reading-time": "^1.5.0",
 		"remark-unwrap-images": "^4.0.0",
-		"tailwindcss": "^3.4.4",
-		"typescript": "^5.4.5"
+		"tailwindcss": "^3.4.4"
 	}
 }

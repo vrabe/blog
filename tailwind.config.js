@@ -1,12 +1,10 @@
-import type { Config } from "tailwindcss";
-
 import { fontFamily } from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
 
 export default {
 	content: [
-		"./src/**/*.{astro,html,js,jsx,md,svelte,ts,tsx,vue}",
-		"!./src/pages/og-image/[slug].png.ts",
+		"./src/**/*.{astro,html,js,jsx,md,mdx}",
+		"!./src/pages/og-image/[slug].png.js",
 	],
 	corePlugins: {
 		// disable aspect ratio as per docs -> @tailwindcss/aspect-ratio
@@ -56,9 +54,6 @@ export default {
 			transitionProperty: {
 				height: "height",
 			},
-			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-			// @ts-expect-error
-			// Remove above once tailwindcss exposes theme type
 			typography: (theme) => ({
 				DEFAULT: {
 					css: {
@@ -132,4 +127,4 @@ export default {
 			}),
 		},
 	},
-} satisfies Config;
+};

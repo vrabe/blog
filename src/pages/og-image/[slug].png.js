@@ -1,15 +1,13 @@
-import type { APIContext, InferGetStaticPropsType } from "astro";
-
 import RobotoMonoBold from "@/assets/roboto-mono-700.ttf";
 import RobotoMono from "@/assets/roboto-mono-regular.ttf";
 import { getAllPosts } from "@/data/post";
 import { siteConfig } from "@/site-config";
 import { getFormattedDate } from "@/utils";
 import { Resvg } from "@resvg/resvg-js";
-import satori, { type SatoriOptions } from "satori";
+import satori from "satori";
 import { html } from "satori-html";
 
-const ogOptions: SatoriOptions = {
+const ogOptions = {
 	// debug: true,
 	fonts: [
 		{
@@ -29,7 +27,7 @@ const ogOptions: SatoriOptions = {
 	width: 1200,
 };
 
-const markup = (title: string, pubDate: string) =>
+const markup = (title, pubDate) =>
 	html`<div tw="flex flex-col w-full h-full bg-[#1d1f21] text-[#c9cacc]">
 		<div tw="flex flex-col flex-1 w-full p-10 justify-center">
 			<p tw="text-2xl mb-6">${pubDate}</p>
@@ -58,10 +56,8 @@ const markup = (title: string, pubDate: string) =>
 		</div>
 	</div>`;
 
-type Props = InferGetStaticPropsType<typeof getStaticPaths>;
-
-export async function GET(context: APIContext) {
-	const { pubDate, title } = context.props as Props;
+export async function GET(context) {
+	const { pubDate, title } = context.props;
 
 	const postDate = getFormattedDate(pubDate, {
 		month: "long",

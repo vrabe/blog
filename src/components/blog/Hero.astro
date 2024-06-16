@@ -1,13 +1,7 @@
 ---
-import type { CollectionEntry } from "astro:content";
-
 import { Image } from "astro:assets";
 
 import FormattedDate from "../FormattedDate.astro";
-
-interface Props {
-	content: CollectionEntry<"post">;
-}
 
 const {
 	content: { data, render },
@@ -78,7 +72,10 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 						class="cactus-link inline-block before:content-['#']"
 						data-pagefind-filter="tag"
 						href={`/tags/${tag}/`}
-					>{tag}</a>{i < data.tags.length - 1 && ", "}
+					>
+						{tag}
+					</a>
+					{i < data.tags.length - 1 && ", "}
 				</>
 			))}
 		</div>
