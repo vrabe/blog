@@ -7,22 +7,22 @@
 	:root[data-theme="light"] {
 		color-scheme: light;
 		/* https://tailwindcss.com/docs/customizing-colors#using-css-variables */
-		--theme-bg: 0deg 0% 98%;
-		--theme-link: 172deg 18% 41%;
+		--theme-bg: 230deg 0% 98%;
+		--theme-link: 350deg 50% 41%;
 		--theme-text: 203deg 11% 15%;
-		--theme-accent: 351deg 66% 48%;
+		--theme-accent: 216deg 66% 48%;
 		--theme-accent-2: 0deg 0% 7%;
-		--theme-quote: 351deg 66% 48%;
+		--theme-quote: 212deg 66% 48%;
 	}
 
 	:root[data-theme="dark"] {
 		color-scheme: dark;
-		--theme-bg: 210deg 6% 12%;
-		--theme-link: 330deg 49% 67%;
-		--theme-text: 220deg 3% 79%;
-		--theme-accent: 159deg 64% 45%;
-		--theme-accent-2: 0deg 0% 93%;
-		--theme-quote: 102deg 100% 86%;
+		--theme-bg: 206deg 9% 15%;
+		--theme-link: 198deg 49% 67%;
+		--theme-text: 220deg 3% 82%;
+		--theme-accent: 4deg 72% 60%;
+		--theme-accent-2: 0deg 0% 88%;
+		--theme-quote: 0deg 100% 86%;
 	}
 
 	html {
