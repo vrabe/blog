@@ -2,10 +2,7 @@ import { fontFamily } from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
 
 export default {
-	content: [
-		"./src/**/*.{astro,html,js,jsx,md,mdx}",
-		"!./src/pages/og-image/[slug].png.js",
-	],
+	content: ["./src/**/*.{astro,html,js,jsx,md,mdx}", "!./src/pages/og-image/[slug].png.js"],
 	corePlugins: {
 		// disable aspect ratio as per docs -> @tailwindcss/aspect-ratio
 		aspectRatio: false,
@@ -22,6 +19,7 @@ export default {
 	plugins: [
 		require("@tailwindcss/typography"),
 		require("@tailwindcss/aspect-ratio"),
+		require("tailwindcss-fluid-type"),
 		plugin(function ({ addComponents }) {
 			addComponents({
 				".cactus-link": {
@@ -48,7 +46,15 @@ export default {
 			},
 			fontFamily: {
 				// Add any custom fonts here
-				sans: [...fontFamily.sans],
+				sans: [
+					"Modified Q",
+					"PT Sans",
+					"Noto Sans CJK TC",
+					"儷黑 Pro",
+					"LiHei Pro",
+					"微軟正黑體",
+					"Microsoft JhengHei",
+				],
 				serif: [...fontFamily.serif],
 			},
 			transitionProperty: {
