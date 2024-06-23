@@ -3,7 +3,7 @@ import { getPostSortDate } from "@/data/post";
 
 import FormattedDate from "../FormattedDate.astro";
 
-const { as: Tag = "div", post, withDesc = false } = Astro.props;
+const { as: Tag = "div", post } = Astro.props;
 const postDate = getPostSortDate(post);
 ---
 
@@ -14,4 +14,3 @@ const postDate = getPostSortDate(post);
 		{post.data.title}
 	</a>
 </Tag>
-{withDesc && <q class="line-clamp-3 italic">{post.data.description}</q>}

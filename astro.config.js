@@ -10,6 +10,7 @@ import remarkUnwrapImages from "remark-unwrap-images";
 
 import { expressiveCodeOptions } from "./src/site.config";
 import { remarkReadingTime } from "./src/utils/remark-reading-time";
+import { rehypeExcerpt } from "./src/utils/rehype-post-excerpt";
 
 // https://astro.build/config
 export default defineConfig({
@@ -27,6 +28,7 @@ export default defineConfig({
 	],
 	markdown: {
 		rehypePlugins: [
+			rehypeExcerpt,
 			[
 				rehypeExternalLinks,
 				{
