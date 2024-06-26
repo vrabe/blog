@@ -1,6 +1,4 @@
 ---
-import { Image } from "astro:assets";
-
 import FormattedDate from "../FormattedDate.astro";
 
 const {
@@ -14,33 +12,20 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 };
 ---
 
-{
-	data.coverImage && (
-		<div class="aspect-h-9 aspect-w-16 mb-6">
-			<Image
-				alt={data.coverImage.alt}
-				class="object-cover"
-				fetchpriority="high"
-				loading="eager"
-				src={data.coverImage.src}
-			/>
-		</div>
-	)
-}
 {data.draft ? <span class="text-base text-red-500">(Draft)</span> : null}
 <h1 class="title mb-3 sm:mb-1">
 	{data.title}
 </h1>
 <div class="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm">
 	<p class="font-semibold">
-		<FormattedDate date={data.publishDate} dateTimeOptions={dateTimeOptions} /> /{" "}
+		<FormattedDate date={data.created} dateTimeOptions={dateTimeOptions} /> /{" "}
 		{remarkPluginFrontmatter.minutesRead}
 	</p>
 	{
-		data.updatedDate && (
+		data.created.toISOString() !== data.updated.toISOString() && (
 			<span class="rounded-lg bg-quote/10 px-1 text-quote">
 				Last Updated:
-				<FormattedDate class="ms-1" date={data.updatedDate} dateTimeOptions={dateTimeOptions} />
+				<FormattedDate class="ms-1" date={data.updated} dateTimeOptions={dateTimeOptions} />
 			</span>
 		)
 	}

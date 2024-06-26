@@ -7,13 +7,19 @@ import Header from "@/components/layout/Header.astro";
 import { siteConfig } from "@/site-config";
 
 const {
-	meta: { articleDate, description = siteConfig.description, ogImage, title },
+	meta: { createdTime, updatedTime, description = siteConfig.description, ogImage, title },
 } = Astro.props;
 ---
 
 <html lang={siteConfig.lang}>
 	<head>
-		<BaseHead articleDate={articleDate} description={description} ogImage={ogImage} title={title} />
+		<BaseHead
+			createdTime={createdTime}
+			updatedTime={updatedTime}
+			description={description}
+			ogImage={ogImage}
+			title={title}
+		/>
 	</head>
 	<body>
 		<ThemeProvider />

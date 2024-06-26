@@ -75,13 +75,11 @@ export async function GET(context) {
 
 export async function getStaticPaths() {
 	const posts = await getAllPosts();
-	return posts
-		.filter(({ data }) => !data.ogImage)
-		.map((post) => ({
-			params: { slug: post.slug },
-			props: {
-				pubDate: post.data.updatedDate ?? post.data.publishDate,
-				title: post.data.title,
-			},
-		}));
+	return posts.map((post) => ({
+		params: { slug: post.slug },
+		props: {
+			pubDate: post.data.created,
+			title: post.data.title,
+		},
+	}));
 }

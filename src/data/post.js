@@ -3,16 +3,16 @@ import { getCollection } from "astro:content";
 
 /** filter out draft posts based on the environment */
 export async function getAllPosts() {
-	return await getCollection("post", ({ data }) => {
+	return await getCollection("blog", ({ data }) => {
 		return import.meta.env.PROD ? !data.draft : true;
 	});
 }
 
 /** returns the date of the post based on option in siteConfig.sortPostsByUpdatedDate */
 export function getPostSortDate(post) {
-	return siteConfig.sortPostsByUpdatedDate && post.data.updatedDate !== undefined
-		? new Date(post.data.updatedDate)
-		: new Date(post.data.publishDate);
+	return siteConfig.sortPostsByUpdatedDate && post.data.updated !== undefined
+		? new Date(post.data.updated)
+		: new Date(post.data.created);
 }
 
 /** sort post by date (by siteConfig.sortPostsByUpdatedDate), desc.*/

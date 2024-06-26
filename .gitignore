@@ -23,3 +23,9 @@ pnpm-debug.log*
 *.pem
 .cache
 .astro
+
+# blog posts
+src/content/blog/
+
+# Upload Script
+upload.sh

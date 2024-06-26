@@ -4,5 +4,8 @@ node_modules
 # cache-dirs
 **/.cache
 
+# blog posts
+src/content/blog/
+
 pnpm-lock.yaml
 dist

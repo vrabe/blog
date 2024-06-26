@@ -7,16 +7,23 @@ import BaseLayout from "./Base.astro";
 
 const { post } = Astro.props;
 const {
-	data: { ogImage, publishDate, title, updatedDate },
+	data: { created, title, updated },
 	slug,
 } = post;
-const socialImage = ogImage ?? `/og-image/${slug}.png`;
-const articleDate = updatedDate?.toISOString() ?? publishDate.toISOString();
+const createdTime = created.toISOString();
+const updatedTime = updated.toISOString();
+const socialImage = `/og-image/${slug}.png`;
 const { headings, remarkPluginFrontmatter } = await post.render();
 ---
 
 <BaseLayout
-	meta={{ articleDate, description: remarkPluginFrontmatter.excerpt, ogImage: socialImage, title }}
+	meta={{
+		createdTime,
+		updatedTime,
+		description: remarkPluginFrontmatter.excerpt,
+		ogImage: socialImage,
+		title,
+	}}
 >
 	<div class="gap-x-10 lg:flex lg:items-start">
 		{!!headings.length && <TOC headings={headings} />}
