@@ -14,7 +14,7 @@ function injectChild(items, item) {
 export function generateToc(headings, { maxHeadingLevel = 4, minHeadingLevel = 2 } = {}) {
 	// by default this ignores/filters out h1 and h5 heading(s)
 	const bodyHeadings = headings.filter(
-		({ depth }) => depth >= minHeadingLevel && depth <= maxHeadingLevel,
+		({ depth }) => depth >= minHeadingLevel && depth <= maxHeadingLevel
 	);
 	const toc = [];
 

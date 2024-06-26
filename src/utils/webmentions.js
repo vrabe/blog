@@ -39,7 +39,7 @@ function mergeWebmentions(a, b) {
 	return Array.from(
 		[...a.children, ...b.children]
 			.reduce((map, obj) => map.set(obj["wm-id"], obj), new Map())
-			.values(),
+			.values()
 	);
 }
 

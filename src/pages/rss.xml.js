@@ -8,7 +8,7 @@ export const GET = async () => {
 		posts.map(async (post) => {
 			const { remarkPluginFrontmatter } = await post.render();
 			return { ...post, excerpt: remarkPluginFrontmatter.excerpt };
-		}),
+		})
 	);
 
 	return rss({
