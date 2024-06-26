@@ -20,6 +20,8 @@ export const siteConfig = {
 	sortPostsByUpdatedDate: false,
 	// Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
 	title: "Astro Theme Cactus",
+	// Timezone of the time of the posts
+	timezone: "Asia/Taipei",
 	webmentions: {
 		// Webmention.io API endpoint. Get your own here: https://webmention.io/, and follow this blog post: https://astro-cactus.chriswilliams.dev/posts/webmentions/
 		link: "https://webmention.io/astro-cactus.chriswilliams.dev/webmention",

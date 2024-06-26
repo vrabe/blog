@@ -1,4 +1,6 @@
 import { defineCollection, z } from "astro:content";
+import { fromZonedTime } from "date-fns-tz";
+import { siteConfig } from "@/site-config";
 
 function removeDupsAndLowerCase(array) {
 	if (!array.length) return array;
@@ -19,16 +21,10 @@ const post = defineCollection({
 			description: z.string().min(50).max(160),
 			draft: z.boolean().default(false),
 			ogImage: z.string().optional(),
-			publishDate: z
-				.string()
-				.or(z.date())
-				.transform((val) => new Date(val)),
+			publishDate: z.string().transform((str) => fromZonedTime(str, siteConfig.timezone)),
 			tags: z.array(z.string()).default([]).transform(removeDupsAndLowerCase),
 			title: z.string().max(60),
-			updatedDate: z
-				.string()
-				.optional()
-				.transform((str) => (str ? new Date(str) : undefined)),
+			updatedDate: z.string().transform((str) => fromZonedTime(str, siteConfig.timezone)),
 		}),
 	type: "content",
 });
