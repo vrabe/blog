@@ -20,28 +20,6 @@ importers:
       '@astrojs/tailwind':
         specifier: ^5.1.0
         version: 5.1.0(astro@4.10.2(@types/node@20.11.17)(typescript@5.4.5))(tailwindcss@3.4.4)
-      astro:
-        specifier: ^4.10.2
-        version: 4.10.2(@types/node@20.11.17)(typescript@5.4.5)
-      astro-expressive-code:
-        specifier: ^0.35.3
-        version: 0.35.3(astro@4.10.2(@types/node@20.11.17)(typescript@5.4.5))
-      astro-icon:
-        specifier: ^1.1.0
-        version: 1.1.0
-      rehype-external-links:
-        specifier: ^3.0.0
-        version: 3.0.0
-      satori:
-        specifier: ^0.10.13
-        version: 0.10.13
-      satori-html:
-        specifier: ^0.3.2
-        version: 0.3.2
-    devDependencies:
-      '@astrojs/check':
-        specifier: ^0.7.0
-        version: 0.7.0(prettier-plugin-astro@0.14.0)(prettier@3.3.2)(typescript@5.4.5)
       '@fontsource/pt-sans':
         specifier: ^5.0.13
         version: 5.0.13
@@ -60,6 +38,15 @@ importers:
       '@tailwindcss/typography':
         specifier: ^0.5.13
         version: 0.5.13(tailwindcss@3.4.4)
+      astro:
+        specifier: ^4.10.2
+        version: 4.10.2(@types/node@20.11.17)(typescript@5.4.5)
+      astro-expressive-code:
+        specifier: ^0.35.3
+        version: 0.35.3(astro@4.10.2(@types/node@20.11.17)(typescript@5.4.5))
+      astro-icon:
+        specifier: ^1.1.0
+        version: 1.1.0
       autoprefixer:
         specifier: ^10.4.19
         version: 10.4.19(postcss@8.4.38)
@@ -93,6 +80,31 @@ importers:
       postcss-import:
         specifier: ^16.1.0
         version: 16.1.0(postcss@8.4.38)
+      reading-time:
+        specifier: ^1.5.0
+        version: 1.5.0
+      rehype-external-links:
+        specifier: ^3.0.0
+        version: 3.0.0
+      remark-unwrap-images:
+        specifier: ^4.0.0
+        version: 4.0.0
+      satori:
+        specifier: ^0.10.13
+        version: 0.10.13
+      satori-html:
+        specifier: ^0.3.2
+        version: 0.3.2
+      tailwindcss:
+        specifier: ^3.4.4
+        version: 3.4.4
+      tailwindcss-fluid-type:
+        specifier: ^2.0.6
+        version: 2.0.6(tailwindcss@3.4.4)
+    devDependencies:
+      '@astrojs/check':
+        specifier: ^0.7.0
+        version: 0.7.0(prettier-plugin-astro@0.14.0)(prettier@3.3.2)(typescript@5.4.5)
       prettier:
         specifier: ^3.3.2
         version: 3.3.2
@@ -102,18 +114,6 @@ importers:
       prettier-plugin-tailwindcss:
         specifier: ^0.6.4
         version: 0.6.4(prettier-plugin-astro@0.14.0)(prettier@3.3.2)
-      reading-time:
-        specifier: ^1.5.0
-        version: 1.5.0
-      remark-unwrap-images:
-        specifier: ^4.0.0
-        version: 4.0.0
-      tailwindcss:
-        specifier: ^3.4.4
-        version: 3.4.4
-      tailwindcss-fluid-type:
-        specifier: ^2.0.6
-        version: 2.0.6(tailwindcss@3.4.4)
 
 packages:
 
