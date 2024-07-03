@@ -73,6 +73,15 @@ export default {
 						code: {
 							border: "1px dotted #666",
 							borderRadius: "2px",
+							fontWeight: "400",
+							paddingInlineEnd: "5px",
+							paddingInlineStart: "5px",
+						},
+						"code::before": {
+							content: "",
+						},
+						"code::after": {
+							content: "",
 						},
 						hr: {
 							borderTopStyle: "dashed",
