@@ -56,6 +56,7 @@ export default {
 					"Microsoft JhengHei",
 				],
 				serif: [...fontFamily.serif],
+				mono: ["B612 Mono", ...fontFamily.mono],
 			},
 			transitionProperty: {
 				height: "height",

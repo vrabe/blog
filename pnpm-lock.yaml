@@ -20,6 +20,9 @@ importers:
       '@astrojs/tailwind':
         specifier: ^5.1.0
         version: 5.1.0(astro@4.10.2(@types/node@20.11.17)(typescript@5.4.5))(tailwindcss@3.4.4)
+      '@fontsource/b612-mono':
+        specifier: ^5.0.19
+        version: 5.0.19
       '@fontsource/pt-sans':
         specifier: ^5.0.13
         version: 5.0.13
@@ -474,6 +477,9 @@ packages:
 
   '@expressive-code/plugin-text-markers@0.35.3':
     resolution: {integrity: sha512-gDdnQrfDRXw5Y+PKHJDkpAUdf2pthYOthGcgy3JB8GOTQ3EL1h+755Ct/bGc4MR6jn+dgnQP47uHMWQaccvN6Q==}
+
+  '@fontsource/b612-mono@5.0.19':
+    resolution: {integrity: sha512-raIVI/oDSssIskfdy7JFnylQbqQ6TQ6Bgkjotebwpd+xujUnthl/IpQharj5cI2wWRKw8OQpedCJy0VVVgLtBA==}
 
   '@fontsource/pt-sans@5.0.13':
     resolution: {integrity: sha512-wINZg2k2SFdBEYFt3N1LQJBQtlzqhq9t1TrZPB+ChWIkoA3UQCrpc1Go9I8xeL85vk/mqwaw6EJX5ce9rNF2sw==}
@@ -3442,6 +3448,8 @@ snapshots:
   '@expressive-code/plugin-text-markers@0.35.3':
     dependencies:
       '@expressive-code/core': 0.35.3
+
+  '@fontsource/b612-mono@5.0.19': {}
 
   '@fontsource/pt-sans@5.0.13': {}
 
