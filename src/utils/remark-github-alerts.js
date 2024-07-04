@@ -82,7 +82,7 @@ const remarkGithubAlerts = (options = {}) => {
 			};
 
 			// Specify a special string (NO-TITLE) in title to remove title.
-			if(title === "NO-TITLE") return;
+			if (title === "NO-TITLE") return;
 
 			node.children = [
 				{
@@ -95,7 +95,6 @@ const remarkGithubAlerts = (options = {}) => {
 					},
 					children: [
 						{
-							// @ts-expect-error can not use span
 							type: "span",
 							data: {
 								hName: "span",
