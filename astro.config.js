@@ -7,6 +7,7 @@ import icon from "astro-icon";
 import fs from "fs";
 import rehypeExternalLinks from "rehype-external-links";
 import remarkUnwrapImages from "remark-unwrap-images";
+import remarkGithubAlerts from "./src/utils/remark-github-alerts";
 
 import { expressiveCodeOptions } from "./src/site.config";
 import { remarkReadingTime } from "./src/utils/remark-reading-time";
@@ -37,7 +38,7 @@ export default defineConfig({
 				},
 			],
 		],
-		remarkPlugins: [remarkUnwrapImages, remarkReadingTime],
+		remarkPlugins: [remarkUnwrapImages, remarkReadingTime, remarkGithubAlerts],
 		remarkRehype: {
 			footnoteLabelProperties: {
 				className: [""],
