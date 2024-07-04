@@ -6,6 +6,8 @@ import expressiveCode from "astro-expressive-code";
 import icon from "astro-icon";
 import fs from "fs";
 import rehypeExternalLinks from "rehype-external-links";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 import remarkUnwrapImages from "remark-unwrap-images";
 import remarkGithubAlerts from "./src/utils/remark-github-alerts";
 
@@ -30,6 +32,7 @@ export default defineConfig({
 	markdown: {
 		rehypePlugins: [
 			rehypeExcerpt,
+			rehypeKatex,
 			[
 				rehypeExternalLinks,
 				{
@@ -38,7 +41,7 @@ export default defineConfig({
 				},
 			],
 		],
-		remarkPlugins: [remarkUnwrapImages, remarkReadingTime, remarkGithubAlerts],
+		remarkPlugins: [remarkUnwrapImages, remarkReadingTime, remarkGithubAlerts, remarkMath],
 		remarkRehype: {
 			footnoteLabelProperties: {
 				className: [""],
