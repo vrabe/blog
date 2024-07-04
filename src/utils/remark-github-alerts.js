@@ -80,6 +80,10 @@ const remarkGithubAlerts = (options = {}) => {
 					class: `${classPrefix} ${classPrefix}-${type}`,
 				},
 			};
+
+			// Specify a special string (NO-TITLE) in title to remove title.
+			if(title === "NO-TITLE") return;
+
 			node.children = [
 				{
 					type: "paragraph",

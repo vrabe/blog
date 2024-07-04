@@ -1,5 +1,21 @@
 # Blog
 
+## Remark Alerts
+
+A normal alert:
+
+> [!note]
+> It's a note.
+
+A title only alert:
+
+> [!note] A Title Only Alert
+
+A content only alert:
+
+> [!note] NO-TITLE
+> It's a note without title.
+
 ## Acknowledgments
 
 The blog uses the following code:
