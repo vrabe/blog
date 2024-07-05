@@ -19,7 +19,7 @@ export const GET = async () => {
 			title: post.data.title,
 			description: post.excerpt,
 			pubDate: post.data.created,
-			link: `posts/${post.slug}`,
+			link: `blog/${post.slug}`,
 		})),
 	});
 };
