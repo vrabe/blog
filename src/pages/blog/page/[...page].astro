@@ -9,7 +9,7 @@ export const getStaticPaths = async ({ paginate }) => {
 	const allPosts = await getAllPosts();
 	const allPostsByDate = sortMDByDate(allPosts);
 	const uniqueTags = getUniqueTags(allPosts);
-	return paginate(allPostsByDate, { pageSize: MAX_POSTS_PER_PAGE, props: { uniqueTags } });
+	return paginate(allPostsByDate, { pageSize: MAX_POSTS_PER_PAGE, props: { uniqueTags } }).slice(1);
 };
 
 const { page, uniqueTags } = Astro.props;
@@ -23,7 +23,7 @@ const paginationProps = {
 	...(page.url.prev && {
 		prevUrl: {
 			text: `← Previous Page`,
-			url: page.url.prev,
+			url: page.currentPage === 2 ? "/blog/" : page.url.prev,
 		},
 	}),
 	...(page.url.next && {
