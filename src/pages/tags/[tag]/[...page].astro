@@ -12,7 +12,7 @@ export const getStaticPaths = async ({ paginate }) => {
 	return uniqueTags.flatMap((tag) => {
 		const filterPosts = allPostsByDate.filter((post) => post.data.tags.includes(tag));
 		return paginate(filterPosts, {
-			pageSize: 10,
+			pageSize: 100,
 			params: { tag },
 		});
 	});
