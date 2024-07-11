@@ -60,3 +60,11 @@ export function getUniqueTagsWithCount(posts) {
 		...getAllTags(posts).reduce((acc, t) => acc.set(t, (acc.get(t) ?? 0) + 1), new Map()),
 	].sort((a, b) => b[1] - a[1]);
 }
+
+/** returns most used tags
+ *  Note: This function doesn't filter draft posts, pass it the result of getAllPosts above to do so.
+ *  */
+export function getTopTags(posts, limit) {
+	const uniqueTagsWithCount = getUniqueTagsWithCount(posts);
+	return uniqueTagsWithCount.slice(0, limit).map((tagWithCount) => tagWithCount[0]);
+}
