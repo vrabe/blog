@@ -1,7 +1,6 @@
 ---
 import PostLayout from "@/layouts/BlogPost.astro";
 import { getAllPosts } from "@/data/post";
-import Block from "@/components/Block.astro";
 
 export const getStaticPaths = async () => {
 	const blogEntries = await getAllPosts();
@@ -16,5 +15,5 @@ const { Content } = await entry.render();
 ---
 
 <PostLayout post={entry}>
-	<Content components={{ Block }} />
+	<Content />
 </PostLayout>
