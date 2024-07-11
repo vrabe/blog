@@ -77,7 +77,7 @@ const descYearKeys = Object.keys(groupedByYear).sort((a, b) => +b - +a);
 								<a
 									aria-label={`View all posts with the tag: ${tag}`}
 									class="flex items-center justify-center rounded-lg bg-accent px-1"
-									href={`/tags/${tag}/`}
+									href={`/blog/tags/${tag}/`}
 								>
 									{tag}
 								</a>
@@ -85,7 +85,11 @@ const descYearKeys = Object.keys(groupedByYear).sort((a, b) => +b - +a);
 						))}
 					</ul>
 					<span class="mt-4 block sm:text-end">
-						<a aria-label="View all blog categories" class="sm:hover:text-accent" href="/tags/">
+						<a
+							aria-label="View all blog categories"
+							class="sm:hover:text-accent"
+							href="/blog/tags/"
+						>
 							檢視全部 →
 						</a>
 					</span>
