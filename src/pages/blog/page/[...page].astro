@@ -22,13 +22,13 @@ const meta = {
 const paginationProps = {
 	...(page.url.prev && {
 		prevUrl: {
-			text: `← Previous Page`,
+			text: `← 上一頁`,
 			url: page.currentPage === 2 ? "/blog/" : page.url.prev,
 		},
 	}),
 	...(page.url.next && {
 		nextUrl: {
-			text: `Next Page →`,
+			text: `下一頁 →`,
 			url: page.url.next,
 		},
 	}),
@@ -95,7 +95,7 @@ const descYearKeys = Object.keys(groupedByYear).sort((a, b) => +b - +a);
 					</ul>
 					<span class="mt-4 block sm:text-end">
 						<a aria-label="View all blog categories" class="sm:hover:text-accent" href="/tags/">
-							View all →
+							檢視全部 →
 						</a>
 					</span>
 				</aside>
