@@ -9,14 +9,24 @@ import { Icon } from "astro-icon/components";
 const socialLinks = [
 	{
 		friendlyName: "Github",
-		link: "https://github.com/chrismwilliams/astro-cactus",
+		link: "https://github.com/vrabe",
 		name: "mdi:github",
+	},
+	{
+		friendlyName: "E-mail",
+		link: "mailto:blog@vrabe.tw",
+		name: "mdi:email-outline",
+	},
+	{
+		friendlyName: "RSS",
+		link: "https://vrabe.tw/rss.xml",
+		name: "mdi:rss",
 	},
 ];
 ---
 
-<div class="flex flex-wrap items-end gap-x-2">
-	<ul class="flex flex-1 items-center gap-x-2 sm:flex-initial">
+<div class="flex flex-wrap items-end">
+	<ul class="flex flex-1 items-center sm:flex-initial">
 		{
 			socialLinks.map(({ friendlyName, isWebmention, link, name }) => (
 				<li class="flex">
