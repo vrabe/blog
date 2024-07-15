@@ -24,4 +24,8 @@ The blog uses the following code:
 - [izmttk/astro-mecure](https://github.com/izmttk/astro-mecure) - [`rehype-post-excerpt`](https://github.com/izmttk/astro-mecure/blob/main/plugins/rehype/rehype-post-excerpt.ts)
 - [hyoban/remark-github-alerts](https://github.com/hyoban/remark-github-alerts)
 
+and assets from:
+
+- funnel_fill from [Framework7](https://framework7.io/icons/)
+
 and libraries listed in `package.json`.
