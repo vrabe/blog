@@ -10,7 +10,6 @@ import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import remarkUnwrapImages from "remark-unwrap-images";
 import remarkGithubAlerts from "./src/utils/remark-github-alerts";
-
 import { expressiveCodeOptions } from "./src/site.config";
 import { remarkReadingTime } from "./src/utils/remark-reading-time";
 import { rehypeExcerpt } from "./src/utils/rehype-post-excerpt";
@@ -51,7 +50,7 @@ export default defineConfig({
 	// https://docs.astro.build/en/guides/prefetch/
 	prefetch: true,
 	// ! Please remember to replace the following site property with your own domain
-	site: "https://astro-cactus.chriswilliams.dev/",
+	site: "https://vrabe.tw/",
 	vite: {
 		optimizeDeps: {
 			exclude: ["@resvg/resvg-js"],

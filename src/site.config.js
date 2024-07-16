@@ -1,25 +1,25 @@
 export const siteConfig = {
 	// Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.js)
-	author: "Chris Williams",
+	author: "vrabe",
 	// Date.prototype.toLocaleDateString() parameters, found in src/utils/date.js.
 	date: {
-		locale: "en-GB",
+		locale: "zh-TW",
 		options: {
 			day: "numeric",
-			month: "short",
+			month: "numeric",
 			year: "numeric",
 		},
 	},
 	// Meta property used as the default description meta property
-	description: "An opinionated starter theme for Astro",
+	description: "主要關於資訊的心得與記錄。",
 	// HTML lang property, found in src/layouts/Base.astro L:18
-	lang: "en-GB",
+	lang: "zh-TW",
 	// Meta property, found in src/components/BaseHead.astro L:42
-	ogLocale: "en_GB",
+	ogLocale: "zh_TW",
 	// Option to sort posts by updatedDate if set to true (if property exists). Default (false) will sort by publishDate
 	sortPostsByUpdatedDate: false,
 	// Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
-	title: "Astro Theme Cactus",
+	title: "鰭狀漏斗",
 	// Timezone of the time of the posts
 	timezone: "Asia/Taipei",
 	webmentions: {
