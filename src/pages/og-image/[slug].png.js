@@ -1,5 +1,3 @@
-import RobotoMonoBold from "@/assets/roboto-mono-700.ttf";
-import RobotoMono from "@/assets/roboto-mono-regular.ttf";
 import { getAllPosts } from "@/data/post";
 import { siteConfig } from "@/site-config";
 import { getFormattedDate } from "@/utils";
@@ -7,18 +5,35 @@ import { Resvg } from "@resvg/resvg-js";
 import satori from "satori";
 import { html } from "satori-html";
 
+const PTSans = fs.readFileSync("src/assets/PTSans-Regular.ttf");
+const PTSansBold = fs.readFileSync("src/assets/PTSans-Bold.ttf");
+const Noto = fs.readFileSync("src/assets/NotoSansCJKtc-Regular.otf");
+const NotoBold = fs.readFileSync("src/assets/NotoSansCJKtc-Bold.otf");
+
 const ogOptions = {
 	// debug: true,
 	fonts: [
 		{
-			data: Buffer.from(RobotoMono),
+			data: Buffer.from(PTSans),
 			name: "Roboto Mono",
 			style: "normal",
 			weight: 400,
 		},
 		{
-			data: Buffer.from(RobotoMonoBold),
+			data: Buffer.from(PTSansBold),
 			name: "Roboto Mono",
+			style: "normal",
+			weight: 700,
+		},
+		{
+			data: Buffer.from(Noto),
+			name: "Noto Sans CJK TC",
+			style: "normal",
+			weight: 400,
+		},
+		{
+			data: Buffer.from(NotoBold),
+			name: "Noto Sans CJK TC",
 			style: "normal",
 			weight: 700,
 		},
@@ -28,27 +43,18 @@ const ogOptions = {
 };
 
 const markup = (title, pubDate) =>
-	html`<div tw="flex flex-col w-full h-full bg-[#1d1f21] text-[#c9cacc]">
+	html`<div tw="flex flex-col w-full h-full bg-[#23272a] text-[#c9cacc]">
 		<div tw="flex flex-col flex-1 w-full p-10 justify-center">
 			<p tw="text-2xl mb-6">${pubDate}</p>
 			<h1 tw="text-6xl font-bold leading-snug text-white">${title}</h1>
 		</div>
-		<div tw="flex items-center justify-between w-full p-10 border-t border-[#2bbc89] text-xl">
+		<div tw="flex items-center justify-between w-full p-10 border-t border-[#e25950] text-xl">
 			<div tw="flex items-center">
-				<svg height="60" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 272 480">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56">
 					<path
-						d="M181.334 93.333v-40L226.667 80v40l-45.333-26.667ZM136.001 53.333 90.667 26.667v426.666L136.001 480V53.333Z"
-						fill="#B04304"
-					></path>
-					<path
-						d="m136.001 119.944 45.333-26.667 45.333 26.667-45.333 26.667-45.333-26.667ZM90.667 26.667 136.001 0l45.333 26.667-45.333 26.666-45.334-26.666ZM181.334 53.277l45.333-26.666L272 53.277l-45.333 26.667-45.333-26.667ZM0 213.277l45.333-26.667 45.334 26.667-45.334 26.667L0 213.277ZM136 239.944l-45.333-26.667v53.333L136 239.944Z"
-						fill="#FF5D01"
-					></path>
-					<path
-						d="m136 53.333 45.333-26.666v120L226.667 120V80L272 53.333V160l-90.667 53.333v240L136 480V306.667L45.334 360V240l45.333-26.667v53.334L136 240V53.333Z"
-						fill="#53C68C"
-					></path>
-					<path d="M45.334 240 0 213.334v120L45.334 360V240Z" fill="#B04304"></path>
+						fill="#c9cacc"
+						d="M45.956 7a4 4 0 0 1 3.149 6.467l-13.38 17.075a4 4 0 0 0-.851 2.467v11.223a4 4 0 0 1-5.314 3.778l-5.479-1.906a4 4 0 0 1-2.686-3.778v-9.293a4 4 0 0 0-.878-2.5L6.877 13.5A4 4 0 0 1 10 7z"
+					/>
 				</svg>
 				<p tw="ml-3 font-semibold">${siteConfig.title}</p>
 			</div>

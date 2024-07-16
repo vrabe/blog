@@ -5,7 +5,6 @@ import { defineConfig } from "astro/config";
 import expressiveCode from "astro-expressive-code";
 import matomo from "astro-matomo";
 import icon from "astro-icon";
-import fs from "fs";
 import rehypeExternalLinks from "rehype-external-links";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
@@ -61,21 +60,5 @@ export default defineConfig({
 		optimizeDeps: {
 			exclude: ["@resvg/resvg-js"],
 		},
-		plugins: [rawFonts([".ttf", ".woff"])],
 	},
 });
-
-function rawFonts(ext) {
-	return {
-		name: "vite-plugin-raw-fonts",
-		transform(_, id) {
-			if (ext.some((e) => id.endsWith(e))) {
-				const buffer = fs.readFileSync(id);
-				return {
-					code: `export default ${JSON.stringify(buffer)}`,
-					map: null,
-				};
-			}
-		},
-	};
-}
