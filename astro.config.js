@@ -3,6 +3,7 @@ import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
 import expressiveCode from "astro-expressive-code";
+import matomo from "astro-matomo";
 import icon from "astro-icon";
 import fs from "fs";
 import rehypeExternalLinks from "rehype-external-links";
@@ -27,6 +28,11 @@ export default defineConfig({
 		}),
 		sitemap(),
 		mdx(),
+		matomo({
+			enabled: import.meta.env.PROD, // Only load in production
+			host: "https://analysis.vrabe.tw/",
+			siteId: 1,
+		}),
 	],
 	markdown: {
 		rehypePlugins: [
