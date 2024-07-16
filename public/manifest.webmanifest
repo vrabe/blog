@@ -1,7 +1,7 @@
 {
-	"name": "Astro Theme Cactus Demo",
-	"short_name": "Astro_Cactus",
-	"description": "Starter blog site for Astro",
+	"name": "鰭狀漏斗",
+	"short_name": "鰭狀漏斗",
+	"description": "主要關於資訊的心得與記錄。",
 	"icons": [
 		{
 			"src": "/192x192.png",
@@ -15,7 +15,7 @@
 		}
 	],
 	"start_url": "/",
-	"background_color": "#1d1f21",
-	"theme_color": "#2bbc8a",
+	"background_color": "#23272a",
+	"theme_color": "#e25950",
 	"display": "standalone"
 }
