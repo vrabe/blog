@@ -27,5 +27,6 @@ The blog uses the following code:
 and assets from:
 
 - funnel_fill from [Framework7](https://framework7.io/icons/)
+- Social card photo by [Tao Yuan](https://unsplash.com/@peek_a_boo_who) on [Unsplash](https://unsplash.com/photos/a-computer-monitor-and-keyboard-Ecr9tGTuBio)
 
 and libraries listed in `package.json`.
