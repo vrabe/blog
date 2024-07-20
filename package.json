@@ -10,7 +10,8 @@
 		"preview": "astro preview",
 		"format": "prettier -w --cache . && prettier -w --cache **/*.astro",
 		"check": "astro check",
-		"sync": "rsync -a --delete --exclude 'draft' ../blog-posts/content/blog src/content"
+		"sync": "rsync -a --delete --exclude 'draft' ../blog-posts/content/blog src/content",
+		"upload:s3": "rclone sync dist s3:vrabe-tw"
 	},
 	"dependencies": {
 		"@astrojs/mdx": "^3.1.2",
