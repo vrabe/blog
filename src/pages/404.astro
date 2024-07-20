@@ -1,7 +1,5 @@
 ---
-import aboutImg from "@/assets/about-astro.png";
 import PageLayout from "@/layouts/Base.astro";
-import { Image } from "astro:assets";
 
 const meta = {
 	description: "哎呀！看來這個頁面已經消失在太空中了！",
@@ -12,12 +10,4 @@ const meta = {
 <PageLayout meta={meta}>
 	<h1 class="title mb-6">404 | 找不到網頁</h1>
 	<p class="mb-8">請使用導覽列回去</p>
-	<div class="my-4 grid justify-center">
-		<Image
-			alt="A cartoon cactus looking at the 'Astro.build' logo"
-			class="rotate-180"
-			loading="eager"
-			src={aboutImg}
-		/>
-	</div>
 </PageLayout>
