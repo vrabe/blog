@@ -60,7 +60,7 @@
 	import { rootInDarkMode } from "@/utils";
 
 	class ThemeToggle extends HTMLElement {
-		#controller: AbortController | undefined;
+		#controller;
 
 		connectedCallback() {
 			const button = this.querySelector("button")!;
