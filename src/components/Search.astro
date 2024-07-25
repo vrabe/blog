@@ -56,40 +56,39 @@ import "@pagefind/default-ui/css/ui.css";
 
 <script>
 	class SiteSearch extends HTMLElement {
-		private closeBtn: HTMLButtonElement;
-		private dialog: HTMLDialogElement;
-		private dialogFrame: HTMLDivElement;
-		private openBtn: HTMLButtonElement;
+		#closeBtn;
+		#dialog;
+		#dialogFrame;
+		#openBtn;
 
 		closeModal = () => {
-			if (this.dialog.open) {
-				this.dialog.close();
+			if (this.#dialog.open) {
+				this.#dialog.close();
 				window.removeEventListener("click", this.onWindowClick);
 			}
 		};
 
-		onWindowClick = (event: MouseEvent) => {
+		onWindowClick = (event) => {
 			// check if it's a link
 			const isLink = "href" in (event.target || {});
 			// make sure the click is either a link or outside of the dialog
 			if (
 				isLink ||
-				(document.body.contains(event.target as Node) &&
-					!this.dialogFrame.contains(event.target as Node))
+				(document.body.contains(event.target) && !this.#dialogFrame.contains(event.target))
 			)
 				this.closeModal();
 		};
 
-		onWindowKeydown = (e: KeyboardEvent) => {
+		onWindowKeydown = (e) => {
 			// check if it's the / key
-			if (e.key === "/" && !this.dialog.open) {
+			if (e.key === "/" && !this.#dialog.open) {
 				this.openModal();
 				e.preventDefault();
 			}
 		};
 
-		openModal = (event?: MouseEvent) => {
-			this.dialog.showModal();
+		openModal = (event) => {
+			this.#dialog.showModal();
 			this.querySelector("input")?.focus();
 			event?.stopPropagation();
 			window.addEventListener("click", this.onWindowClick);
@@ -97,14 +96,14 @@ import "@pagefind/default-ui/css/ui.css";
 
 		constructor() {
 			super();
-			this.openBtn = this.querySelector<HTMLButtonElement>("button[data-open-modal]")!;
-			this.closeBtn = this.querySelector<HTMLButtonElement>("button[data-close-modal]")!;
-			this.dialog = this.querySelector("dialog")!;
-			this.dialogFrame = this.querySelector(".dialog-frame")!;
+			this.#openBtn = this.querySelector<HTMLButtonElement>("button[data-open-modal]")!;
+			this.#closeBtn = this.querySelector<HTMLButtonElement>("button[data-close-modal]")!;
+			this.#dialog = this.querySelector("dialog")!;
+			this.#dialogFrame = this.querySelector(".dialog-frame")!;
 
-			this.openBtn.addEventListener("click", this.openModal);
-			this.openBtn.disabled = false;
-			this.closeBtn.addEventListener("click", this.closeModal);
+			this.#openBtn.addEventListener("click", this.openModal);
+			this.#openBtn.disabled = false;
+			this.#closeBtn.addEventListener("click", this.closeModal);
 		}
 
 		connectedCallback() {
