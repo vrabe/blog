@@ -3,7 +3,6 @@ import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
 import expressiveCode from "astro-expressive-code";
-import partytown from "@astrojs/partytown";
 import matomo from "astro-matomo";
 import icon from "astro-icon";
 import rehypeExternalLinks from "rehype-external-links";
@@ -29,12 +28,10 @@ export default defineConfig({
 		}),
 		sitemap(),
 		mdx(),
-		partytown(),
 		matomo({
 			enabled: import.meta.env.PROD, // Only load in production
 			host: "https://analysis.vrabe.tw/",
 			siteId: 1,
-			partytown: true,
 		}),
 	],
 	markdown: {
