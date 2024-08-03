@@ -25,7 +25,7 @@ pnpm-debug.log*
 .astro
 
 # blog posts
-src/content/blog/
+src/content/blog
 
 # Upload Script
 upload.sh
