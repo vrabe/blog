@@ -34,10 +34,7 @@ export default defineConfig({
 		}),
 	],
 	markdown: {
-		rehypePlugins: [
-			rehypeExcerpt,
-			rehypeKatex,
-		],
+		rehypePlugins: [rehypeExcerpt, rehypeKatex],
 		remarkPlugins: [remarkUnwrapImages, remarkReadingTime, remarkGithubAlerts, remarkMath],
 		remarkRehype: {
 			footnoteLabelProperties: {
