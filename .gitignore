@@ -29,3 +29,4 @@ src/content/blog
 
 # Upload Script
 upload.sh
+upload-s3.sh
