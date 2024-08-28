@@ -12,7 +12,8 @@
 		"format": "prettier -w --cache . && prettier -w --cache **/*.astro",
 		"check": "astro check",
 		"sync": "rsync -a --delete --exclude 'draft' ../blog-posts/content/blog src/content",
-		"upload:s3": "./upload-s3.sh"
+		"upload:s3": "./upload-s3.sh",
+		"deploy": "pnpm sync && pnpm build && pnpm upload:s3"
 	},
 	"dependencies": {
 		"@astrojs/mdx": "^3.1.4",
