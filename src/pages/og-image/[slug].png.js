@@ -15,13 +15,13 @@ const ogOptions = {
 	fonts: [
 		{
 			data: Buffer.from(PTSans),
-			name: "Roboto Mono",
+			name: "PT Sans",
 			style: "normal",
 			weight: 400,
 		},
 		{
 			data: Buffer.from(PTSansBold),
-			name: "Roboto Mono",
+			name: "PT Sans",
 			style: "normal",
 			weight: 700,
 		},
