@@ -1,21 +1,21 @@
 {
-	"name": "鰭狀漏斗",
-	"short_name": "鰭狀漏斗",
-	"description": "主要關於資訊的心得與記錄。",
-	"icons": [
-		{
-			"src": "/192x192.png",
-			"sizes": "192x192",
-			"type": "image/png"
-		},
-		{
-			"src": "/512x512.png",
-			"sizes": "512x512",
-			"type": "image/png"
-		}
-	],
-	"start_url": "/",
-	"background_color": "#23272a",
-	"theme_color": "#e25950",
-	"display": "standalone"
+  "name": "鰭狀漏斗",
+  "short_name": "鰭狀漏斗",
+  "description": "主要關於資訊的心得與記錄。",
+  "icons": [
+    {
+      "src": "/192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#23272a",
+  "theme_color": "#e25950",
+  "display": "standalone"
 }

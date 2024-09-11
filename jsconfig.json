@@ -1,16 +1,16 @@
 {
-	"compilerOptions": {
-		"baseUrl": ".",
-		"lib": ["es2022", "dom", "dom.iterable"],
-		"paths": {
-			"@/assets/*": ["src/assets/*"],
-			"@/components/*": ["src/components/*"],
-			"@/data/*": ["src/data/*"],
-			"@/layouts/*": ["src/layouts/*"],
-			"@/utils": ["src/utils/index.js"],
-			"@/site-config": ["src/site.config.js"]
-		}
-	},
-	"include": ["**/*"],
-	"exclude": ["node_modules", "**/node_modules/*", ".vscode", "dist"]
+  "compilerOptions": {
+    "baseUrl": ".",
+    "lib": ["es2022", "dom", "dom.iterable"],
+    "paths": {
+      "@/assets/*": ["src/assets/*"],
+      "@/components/*": ["src/components/*"],
+      "@/data/*": ["src/data/*"],
+      "@/layouts/*": ["src/layouts/*"],
+      "@/utils": ["src/utils/index.js"],
+      "@/site-config": ["src/site.config.js"]
+    }
+  },
+  "include": ["**/*"],
+  "exclude": ["node_modules", "**/node_modules/*", ".vscode", "dist"]
 }

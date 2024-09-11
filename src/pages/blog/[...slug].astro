@@ -3,11 +3,11 @@ import PostLayout from "@/layouts/BlogPost.astro";
 import { getAllPosts } from "@/data/post";
 
 export const getStaticPaths = async () => {
-	const blogEntries = await getAllPosts();
-	return blogEntries.map((entry) => ({
-		params: { slug: entry.slug },
-		props: { entry },
-	}));
+  const blogEntries = await getAllPosts();
+  return blogEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
 };
 
 const { entry } = Astro.props;
@@ -15,5 +15,5 @@ const { Content } = await entry.render();
 ---
 
 <PostLayout post={entry}>
-	<Content />
+  <Content />
 </PostLayout>

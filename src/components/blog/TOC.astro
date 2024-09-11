@@ -9,8 +9,8 @@ const toc = generateToc(headings);
 ---
 
 <aside class="sticky top-20 order-2 -me-32 hidden basis-64 lg:block">
-	<h2 class="font-semibold text-accent-2">目次</h2>
-	<ul class="mt-4 text-xs">
-		{toc.map((heading) => <TOCHeading heading={heading} />)}
-	</ul>
+  <h2 class="font-semibold text-accent-2">目次</h2>
+  <ul class="mt-4 text-xs">
+    {toc.map((heading) => <TOCHeading heading={heading} />)}
+  </ul>
 </aside>

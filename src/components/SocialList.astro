@@ -7,40 +7,40 @@ import { Icon } from "astro-icon/components";
 	Only installed pack is: @iconify-json/mdi
 */
 const socialLinks = [
-	{
-		friendlyName: "Github",
-		link: "https://github.com/vrabe",
-		name: "mdi:github",
-	},
-	{
-		friendlyName: "E-mail",
-		link: "mailto:blog@vrabe.tw",
-		name: "mdi:email-outline",
-	},
-	{
-		friendlyName: "RSS",
-		link: "https://vrabe.tw/rss.xml",
-		name: "mdi:rss",
-	},
+  {
+    friendlyName: "Github",
+    link: "https://github.com/vrabe",
+    name: "mdi:github",
+  },
+  {
+    friendlyName: "E-mail",
+    link: "mailto:blog@vrabe.tw",
+    name: "mdi:email-outline",
+  },
+  {
+    friendlyName: "RSS",
+    link: "https://vrabe.tw/rss.xml",
+    name: "mdi:rss",
+  },
 ];
 ---
 
 <div class="flex flex-wrap items-end">
-	<ul class="flex flex-1 items-center sm:flex-initial">
-		{
-			socialLinks.map(({ friendlyName, isWebmention, link, name }) => (
-				<li class="flex">
-					<a
-						class="inline-block p-1 sm:hover:text-link"
-						href={link}
-						rel={`noopener noreferrer ${isWebmention ? "me authn" : ""}`}
-						target="_blank"
-					>
-						<Icon aria-hidden="true" class="h-6 w-6" focusable="false" name={name} />
-						<span class="sr-only">{friendlyName}</span>
-					</a>
-				</li>
-			))
-		}
-	</ul>
+  <ul class="flex flex-1 items-center sm:flex-initial">
+    {
+      socialLinks.map(({ friendlyName, isWebmention, link, name }) => (
+        <li class="flex">
+          <a
+            class="inline-block p-1 sm:hover:text-link"
+            href={link}
+            rel={`noopener noreferrer ${isWebmention ? "me authn" : ""}`}
+            target="_blank"
+          >
+            <Icon aria-hidden="true" class="h-6 w-6" focusable="false" name={name} />
+            <span class="sr-only">{friendlyName}</span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
 </div>
