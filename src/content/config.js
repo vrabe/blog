@@ -1,5 +1,5 @@
 import { defineCollection, z } from "astro:content";
-import { fromZonedTime } from "date-fns-tz";
+import { TZDate } from "@date-fns/tz";
 import { siteConfig } from "@/site-config";
 
 function removeDupsAndLowerCase(array) {
@@ -13,8 +13,8 @@ const blog = defineCollection({
   type: "content",
   schema: z.object({
     title: z.string(),
-    created: z.string().transform((str) => fromZonedTime(str, siteConfig.timezone)),
-    updated: z.string().transform((str) => fromZonedTime(str, siteConfig.timezone)),
+    created: z.string().transform((str) => new TZDate(str, siteConfig.timezone)),
+    updated: z.string().transform((str) => new TZDate(str, siteConfig.timezone)),
     categories: z.array(z.string()).nullable().default([]).transform(removeDupsAndLowerCase),
     tags: z.array(z.string()).nullable().default([]).transform(removeDupsAndLowerCase),
     draft: z.boolean().default(false),
