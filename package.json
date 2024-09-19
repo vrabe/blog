@@ -11,12 +11,11 @@
     "preview": "astro preview",
     "format": "prettier -w --cache . && prettier -w --cache **/*.astro",
     "check": "astro check",
-    "sync": "rsync -a --delete --exclude 'draft' ../blog-posts/content/blog src/content",
     "upload:s3": "./upload-s3.sh",
-    "distribute": "pnpm sync && pnpm build && pnpm upload:s3"
+    "distribute": "pnpm build && pnpm upload:s3"
   },
   "dependencies": {
-    "@astrojs/mdx": "^3.1.6",
+    "@astrojs/mdx": "^3.1.7",
     "@astrojs/rss": "^4.0.7",
     "@astrojs/sitemap": "^3.1.6",
     "@astrojs/tailwind": "^5.1.1",
@@ -28,7 +27,7 @@
     "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/typography": "^0.5.15",
-    "astro": "^4.15.7",
+    "astro": "^4.15.8",
     "astro-expressive-code": "^0.35.6",
     "astro-icon": "^1.1.1",
     "astro-matomo": "^1.6.0",

@@ -2,10 +2,9 @@
 import FormattedDate from "../FormattedDate.astro";
 
 const {
-  content: { data, render },
+  content: { data },
+  readingTime,
 } = Astro.props;
-
-const { remarkPluginFrontmatter } = await render();
 
 const dateTimeOptions: Intl.DateTimeFormatOptions = {
   month: "long",
@@ -19,7 +18,7 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 <div class="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm">
   <p class="font-semibold">
     <FormattedDate date={data.created} dateTimeOptions={dateTimeOptions} /> /
-    {` 閱讀時間 ${Math.ceil(remarkPluginFrontmatter.minutesRead)} 分鐘`}
+    {` 閱讀時間 ${Math.ceil(readingTime)} 分鐘`}
   </p>
   {
     data.created.toISOString() !== data.updated.toISOString() && (

@@ -1,3 +1,4 @@
+import { render } from "astro:content";
 import rss from "@astrojs/rss";
 import { siteConfig } from "@/site-config";
 import { getAllPosts } from "@/data/post";
@@ -6,7 +7,7 @@ export const GET = async () => {
   let posts = await getAllPosts();
   posts = await Promise.all(
     posts.map(async (post) => {
-      const { remarkPluginFrontmatter } = await post.render();
+      const { remarkPluginFrontmatter } = await render(post);
       return { ...post, excerpt: remarkPluginFrontmatter.excerpt };
     })
   );
@@ -19,7 +20,7 @@ export const GET = async () => {
       title: post.data.title,
       description: post.excerpt,
       pubDate: post.data.created,
-      link: `blog/${post.slug}`,
+      link: `blog/${post.id}`,
     })),
   });
 };

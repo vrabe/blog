@@ -1,4 +1,5 @@
 import { defineCollection, z } from "astro:content";
+import { glob } from "astro/loaders";
 import { TZDate } from "@date-fns/tz";
 import { siteConfig } from "@/site-config";
 
@@ -10,7 +11,7 @@ function removeDupsAndLowerCase(array) {
 }
 
 const blog = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "**/*.mdx", base: "node_modules/blog-posts/content/blog" }),
   schema: z.object({
     title: z.string(),
     created: z.string().transform((str) => new TZDate(str, siteConfig.timezone)),
