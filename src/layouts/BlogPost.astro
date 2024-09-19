@@ -9,11 +9,11 @@ import BaseLayout from "./Base.astro";
 const { post } = Astro.props;
 const {
   data: { created, title, updated },
-  slug,
+  id,
 } = post;
 const createdTime = created.toISOString();
 const updatedTime = updated.toISOString();
-const socialImage = `/og-image/${slug}.png`;
+const socialImage = `/og-image/${id}.png`;
 const { headings, remarkPluginFrontmatter } = await render(post);
 ---
 
