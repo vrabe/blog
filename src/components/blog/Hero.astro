@@ -17,14 +17,19 @@ const dateTimeOptions = {
 </h1>
 <div class="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm">
   <p class="font-semibold">
-    <FormattedDate date={data.created} dateTimeOptions={dateTimeOptions} /> /
+    <FormattedDate date={data.created} dateTimeOptions={dateTimeOptions} showTooltip /> /
     {` 閱讀時間 ${Math.ceil(readingTime)} 分鐘`}
   </p>
   {
     data.created.toISOString() !== data.updated.toISOString() && (
       <span class="rounded-lg bg-quote/10 px-1 text-quote">
         上次更新:
-        <FormattedDate class="ms-1" date={data.updated} dateTimeOptions={dateTimeOptions} />
+        <FormattedDate
+          class="ms-1"
+          date={data.updated}
+          dateTimeOptions={dateTimeOptions}
+          showTooltip
+        />
       </span>
     )
   }
