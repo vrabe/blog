@@ -74,6 +74,9 @@ const isTagPage = /blog\/tags/.test(Astro.url.pathname);
 {/* RSS auto-discovery */}
 <link href="/rss.xml" rel="alternate" title={siteConfig.title} type="application/rss+xml" />
 
+{/* No Index for tag pages */}
+{isTagPage && <meta content="noindex" name="robots" />}
+
 {/* Webmentions */}
 {
   siteConfig.webmentions && (
@@ -87,5 +90,3 @@ const isTagPage = /blog\/tags/.test(Astro.url.pathname);
 }
 
 <meta content={Astro.generator} name="generator" />
-
-{isTagPage && <meta name="robots" content="noindex" />}
