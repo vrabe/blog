@@ -26,7 +26,7 @@ export default defineConfig({
       nesting: true,
     }),
     sitemap({
-      filter: (page) => !/blog\/tags/.test(page),
+      filter: (page) => !/\/blog\/tags/.test(page),
     }),
     mdx(),
     matomo({
