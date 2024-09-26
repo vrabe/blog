@@ -25,7 +25,9 @@ export default defineConfig({
       applyBaseStyles: false,
       nesting: true,
     }),
-    sitemap(),
+    sitemap({
+      filter: (page) => !/blog\/tags/.test(page),
+    }),
     mdx(),
     matomo({
       enabled: import.meta.env.PROD, // Only load in production
