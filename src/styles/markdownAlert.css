@@ -7,7 +7,7 @@
 }
 
 .markdown-alert .markdown-alert-title .octicon {
-  @apply mr-2 inline-block h-[1.2em] w-[1.2em] !overflow-visible bg-current align-text-bottom text-inherit;
+  @apply mr-2 inline-block h-[1.2em] w-[1.2em] !overflow-visible align-text-bottom text-inherit;
 
   -webkit-mask: var(--oct-icon) no-repeat;
   mask: var(--oct-icon) no-repeat;
@@ -19,6 +19,14 @@
   @apply border-blue-600 dark:border-blue-400;
 }
 
+.markdown-alert-note .octicon {
+  @apply bg-blue-600 dark:bg-blue-400;
+}
+
 .markdown-alert-warning {
   @apply border-orange-400 dark:border-yellow-400;
+}
+
+.markdown-alert-warning .octicon {
+  @apply bg-orange-400 dark:bg-yellow-400;
 }
