@@ -11,7 +11,7 @@ function removeDupsAndLowerCase(array) {
 }
 
 const blog = defineCollection({
-  loader: glob({ pattern: "**/*.mdx", base: "node_modules/blog-posts/content/blog" }),
+  loader: glob({ pattern: "**/*.mdx", base: "../blog-posts/content/blog" }),
   schema: z.object({
     title: z.string(),
     created: z.string().transform((str) => new TZDate(str, siteConfig.timezone)),
