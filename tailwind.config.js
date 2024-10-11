@@ -4,21 +4,18 @@ import plugin from "tailwindcss/plugin";
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx}", "!./src/pages/og-image/[id].png.js"],
   corePlugins: {
-    // disable aspect ratio as per docs -> @tailwindcss/aspect-ratio
-    aspectRatio: false,
+    // disable some core plugins as they are included in the css, even when unused
     borderOpacity: false,
     fontVariantNumeric: false,
     ringOffsetColor: false,
     ringOffsetWidth: false,
     scrollSnapType: false,
     textOpacity: false,
-    // disable some core plugins as they are included in the css, even when unused
     touchAction: false,
   },
   darkMode: ["class", '[data-theme="dark"]'],
   plugins: [
     require("@tailwindcss/typography"),
-    require("@tailwindcss/aspect-ratio"),
     require("tailwindcss-fluid-type"),
     plugin(function ({ addComponents }) {
       addComponents({
@@ -83,6 +80,9 @@ export default {
             "code::after": {
               content: "",
             },
+            kbd: {
+              "@apply dark:bg-textColor": "",
+            },
             hr: {
               borderTopStyle: "dashed",
             },
@@ -104,6 +104,7 @@ export default {
                 "@apply bg-none": "",
               },
             },
+            /* Table */
             "tbody tr": {
               borderBottomWidth: "none",
             },
@@ -116,6 +117,15 @@ export default {
             "thead th": {
               borderBottom: "1px dashed #666",
               fontWeight: "700",
+            },
+            'th[align="center"], td[align="center"]': {
+              "text-align": "center",
+            },
+            'th[align="right"], td[align="right"]': {
+              "text-align": "right",
+            },
+            'th[align="left"], td[align="left"]': {
+              "text-align": "left",
             },
           },
         },
