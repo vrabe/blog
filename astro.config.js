@@ -5,6 +5,7 @@ import { defineConfig } from "astro/config";
 import expressiveCode from "astro-expressive-code";
 import matomo from "astro-matomo";
 import icon from "astro-icon";
+import rehypeExternalLinks from "rehype-external-links";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import remarkUnwrapImages from "remark-unwrap-images";
@@ -36,7 +37,17 @@ export default defineConfig({
     }),
   ],
   markdown: {
-    rehypePlugins: [rehypeExcerpt, rehypeKatex],
+    rehypePlugins: [
+      rehypeExcerpt,
+      rehypeKatex,
+      [
+        rehypeExternalLinks,
+        {
+          rel: ["noopener, noreferrer"],
+          target: "_blank",
+        },
+      ],
+    ],
     remarkPlugins: [remarkUnwrapImages, remarkReadingTime, remarkGithubAlerts, remarkMath],
     remarkRehype: {
       footnoteLabelProperties: {
