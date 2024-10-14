@@ -25,3 +25,9 @@
     --theme-quote: 0deg 100% 86%;
   }
 }
+
+@layer components {
+  .phone-image img {
+    @apply max-h-[80vh] sm:max-h-[60vh];
+  }
+}

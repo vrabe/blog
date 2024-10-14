@@ -2,7 +2,11 @@ import { fontFamily } from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
 
 export default {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx}", "!./src/pages/og-image/[id].png.js"],
+  content: [
+    "./src/**/*.{astro,html,js,jsx,md,mdx}",
+    "../blog-posts/content/blog/**/*.{md,mdx}",
+    "!./src/pages/og-image/[id].png.js",
+  ],
   corePlugins: {
     // disable some core plugins as they are included in the css, even when unused
     borderOpacity: false,
@@ -105,7 +109,7 @@ export default {
               },
             },
             img: {
-              "@apply mx-auto w-auto max-h-[80vh] sm:max-h-[60vh]": "",
+              "@apply mx-auto w-auto": "",
             },
             /* Table */
             "tbody tr": {
