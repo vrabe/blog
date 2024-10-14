@@ -104,6 +104,9 @@ export default {
                 "@apply bg-none": "",
               },
             },
+            img: {
+              "@apply mx-auto w-auto max-h-[80vh] sm:max-h-[60vh]": "",
+            },
             /* Table */
             "tbody tr": {
               borderBottomWidth: "none",
