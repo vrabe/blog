@@ -7,16 +7,34 @@ My blog: <https://vrabe.tw>
 A normal alert:
 
 > [!note]
+>
 > It's a note.
+
+```
+> [!note]
+>
+> It's a note.
+```
 
 A title only alert:
 
 > [!note] A Title Only Alert
 
+```
+> [!note] A Title Only Alert
+```
+
 A content only alert:
 
 > [!note] NO-TITLE
+>
 > It's a note without title.
+
+```
+> [!note] NO-TITLE
+>
+> It's a note without title.
+```
 
 ## Acknowledgments
 

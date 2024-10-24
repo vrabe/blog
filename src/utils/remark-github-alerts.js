@@ -40,9 +40,7 @@ const remarkGithubAlerts = (options = {}) => {
 
   const markerNameRE = markers === "*" ? "\\w+" : markers.join("|");
   const RE = new RegExp(
-    ignoreSquareBracket
-      ? `^!(${markerNameRE})([^\\n\\r]*)`
-      : `^\\[\\!(${markerNameRE})\\]([^\\n\\r]*)`,
+    ignoreSquareBracket ? `^!(${markerNameRE})` : `^\\[\\!(${markerNameRE})\\]`,
     matchCaseSensitive ? "" : "i"
   );
 
@@ -61,18 +59,26 @@ const remarkGithubAlerts = (options = {}) => {
       if (!match) return;
 
       const type = match[1]?.toLowerCase();
-      const title = match[2]?.trim() || (titles[type] ?? capitalize(type));
       const icon = icons[type];
       const iconDataUri = `data:image/svg+xml;utf8,${encodeSvg(icon)}`;
+      let noTitle = false;
 
       if (index === undefined || !parent) return;
 
       firstContent.value = firstContent.value.slice(match[0].length).trimStart();
 
-      // Remove the first paragraph (<p>) if the first paragraph is empty after processing.
-      if (firstContent.value === "") {
-        node.children = node.children.slice(1);
+      // Make sure no other content but a text node in the first paragraph.
+      if (firstParagraph.children.length === 1) {
+        // Specify a special string (NO-TITLE) in title to remove title.
+        if (firstContent.value === "NO-TITLE") {
+          noTitle = true;
+        } else if (firstContent.value === "") {
+          firstContent.value = titles[type] ?? capitalize(type);
+        }
       }
+
+      // Remove the first paragraph (<p>).
+      node.children = node.children.slice(1);
 
       node.data = {
         hName: "aside",
@@ -81,8 +87,7 @@ const remarkGithubAlerts = (options = {}) => {
         },
       };
 
-      // Specify a special string (NO-TITLE) in title to remove title.
-      if (title === "NO-TITLE") return;
+      if (noTitle) return;
 
       node.children = [
         {
@@ -104,10 +109,7 @@ const remarkGithubAlerts = (options = {}) => {
                 },
               },
             },
-            {
-              type: "text",
-              value: title,
-            },
+            ...firstParagraph.children,
           ],
         },
         ...node.children,
