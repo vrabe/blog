@@ -11,6 +11,6 @@
       "@/site-config": ["src/site.config.js"]
     }
   },
-  "include": ["**/*"],
+  "include": ["**/*", "**/*.astro"],
   "exclude": ["node_modules", "**/node_modules/*", ".vscode", "dist"]
 }
