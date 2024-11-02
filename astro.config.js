@@ -34,6 +34,7 @@ export default defineConfig({
       enabled: import.meta.env.PROD, // Only load in production
       host: "https://analysis.vrabe.tw/",
       siteId: 1,
+      heartBeatTimer: 10,
     }),
   ],
   markdown: {
