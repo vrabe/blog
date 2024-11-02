@@ -56,15 +56,13 @@ const dateTimeOptions = {
       </svg>
       {data.tags.map((tag, i) => (
         <>
+          {/* The following should not be formatted! */}
           <a
             aria-label={`View more blogs with the tag ${tag}`}
             class="cactus-link inline-block before:content-['#']"
             data-pagefind-filter="tag"
             href={`/blog/tags/${tag}/`}
-          >
-            {tag}
-          </a>
-          {i < data.tags.length - 1 && ", "}
+          >{tag}</a>{i < data.tags.length - 1 && ", "}
         </>
       ))}
     </div>
