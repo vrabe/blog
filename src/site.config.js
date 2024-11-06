@@ -16,8 +16,6 @@ export const siteConfig = {
   lang: "zh-TW",
   // Meta property, found in src/components/BaseHead.astro L:42
   ogLocale: "zh_TW",
-  // Option to sort posts by updatedDate if set to true (if property exists). Default (false) will sort by publishDate
-  sortPostsByUpdatedDate: false,
   // Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
   title: "鰭狀漏斗",
   // Timezone of the time of the posts

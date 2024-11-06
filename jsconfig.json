@@ -7,7 +7,7 @@
       "@/components/*": ["src/components/*"],
       "@/data/*": ["src/data/*"],
       "@/layouts/*": ["src/layouts/*"],
-      "@/utils": ["src/utils/index.js"],
+      "@/utils/*": ["src/utils/*"],
       "@/site-config": ["src/site.config.js"]
     }
   },
