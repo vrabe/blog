@@ -7,8 +7,9 @@ import { collectionDateSort } from "@/utils/date";
 
 export const getStaticPaths = async ({ paginate }) => {
   const MAX_POSTS_PER_PAGE = 10;
+  const MAX_TAGS = 7;
   const allPosts = await getAllPosts();
-  const uniqueTags = getTopTags(allPosts, 25);
+  const uniqueTags = getTopTags(allPosts, MAX_TAGS);
   return paginate(allPosts.sort(collectionDateSort), {
     pageSize: MAX_POSTS_PER_PAGE,
     props: { uniqueTags },
@@ -42,14 +43,14 @@ const descYearKeys = Object.keys(groupedByYear).sort((a, b) => +b - +a);
 ---
 
 <PageLayout meta={meta}>
-  <h1 class="title mb-6">Posts</h1>
+  <h1 class="title mb-6 flex items-center gap-3">Posts</h1>
   <div class="grid gap-y-16 sm:grid-cols-[3fr_1fr] sm:gap-x-8">
     <section aria-label="Blog post list">
       {
         descYearKeys.map((yearKey) => (
           <>
             <h2 class="title text-lg">{yearKey}</h2>
-            <ul class="mb-8 mt-6 space-y-8 text-start">
+            <ul class="mb-16 mt-5 space-y-4 text-start">
               {groupedByYear[yearKey]?.map((p) => (
                 <li class="grid gap-2 sm:grid-cols-[auto_1fr] sm:[&_q]:col-start-2">
                   <PostPreview post={p} />
@@ -64,7 +65,7 @@ const descYearKeys = Object.keys(groupedByYear).sort((a, b) => +b - +a);
     {
       !!uniqueTags.length && (
         <aside>
-          <h2 class="title mb-4 flex items-center text-lg">
+          <h2 class="title mb-4 flex items-center gap-2 text-lg">
             <svg
               aria-hidden="true"
               class="h-6 w-6"
@@ -83,25 +84,21 @@ const descYearKeys = Object.keys(groupedByYear).sort((a, b) => +b - +a);
             </svg>
             Tags
           </h2>
-          <ul class="flex flex-wrap gap-2 text-sm text-bgColor">
+          <ul class="flex flex-wrap gap-2 text-sm">
             {uniqueTags.map((tag) => (
               <li>
                 <a
                   aria-label={`View all posts with the tag: ${tag}`}
-                  class="flex items-center justify-center rounded-lg bg-accent px-1"
+                  class="cactus-link flex items-center justify-center"
                   href={`/blog/tags/${tag}/`}
                 >
-                  {tag}
+                  #{tag}
                 </a>
               </li>
             ))}
           </ul>
           <span class="mt-4 block sm:text-end">
-            <a
-              aria-label="View all blog categories"
-              class="sm:hover:text-accent"
-              href="/blog/tags/"
-            >
+            <a aria-label="View all blog categories" class="sm:hover:text-link" href="/blog/tags/">
               檢視全部 →
             </a>
           </span>

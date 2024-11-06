@@ -11,11 +11,11 @@ const allPostsByDate = allPosts.sort(collectionDateSort).slice(0, MAX_POSTS);
 
 <PageLayout meta={{ title: "Home" }}>
   <section aria-label="Blog post list" class="mt-16">
-    <h2 class="title mb-4 text-xl">最新文章</h2>
+    <h2 class="title mb-6 text-xl text-accent">最新文章</h2>
     <ul class="space-y-4">
       {
         allPostsByDate.map((p) => (
-          <li class="grid gap-2 sm:grid-cols-[auto_1fr] sm:[&_q]:col-start-2">
+          <li class="grid gap-2 sm:grid-cols-[auto_1fr]">
             <PostPreview post={p} />
           </li>
         ))
