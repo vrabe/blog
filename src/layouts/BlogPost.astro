@@ -2,7 +2,6 @@
 import { render } from "astro:content";
 import BlogHero from "@/components/blog/Hero.astro";
 import TOC from "@/components/blog/TOC.astro";
-import WebMentions from "@/components/blog/webmentions/index.astro";
 
 import BaseLayout from "./Base.astro";
 
@@ -36,7 +35,6 @@ const { headings, remarkPluginFrontmatter } = await render(post);
         class="prose prose-cactus mt-12 text-base prose-headings:font-semibold prose-headings:text-accent-2 prose-headings:before:absolute prose-headings:before:-ms-5 prose-headings:before:text-accent sm:prose-headings:before:content-['#'] sm:prose-th:before:content-none"
       >
         <slot />
-        <WebMentions />
       </div>
     </article>
   </div>

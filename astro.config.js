@@ -16,9 +16,6 @@ import { rehypeExcerpt } from "./src/utils/rehype-post-excerpt";
 
 // https://astro.build/config
 export default defineConfig({
-  image: {
-    domains: ["webmention.io"],
-  },
   integrations: [
     expressiveCode(expressiveCodeOptions),
     icon(),

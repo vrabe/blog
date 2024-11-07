@@ -20,12 +20,6 @@ export const siteConfig = {
   title: "鰭狀漏斗",
   // Timezone of the time of the posts
   timezone: "Asia/Taipei",
-  /*
-	webmentions: {
-		// Webmention.io API endpoint. Get your own here: https://webmention.io/, and follow this blog post: https://astro-cactus.chriswilliams.dev/posts/webmentions/
-		link: "https://webmention.io/astro-cactus.chriswilliams.dev/webmention",
-	},
-	*/
 };
 
 // Used to generate links in both the Header & Footer.
