@@ -41,7 +41,12 @@ export function getUniqueTags(posts) {
 export function getUniqueTagsWithCount(posts) {
   return [
     ...getAllTags(posts).reduce((acc, t) => acc.set(t, (acc.get(t) ?? 0) + 1), new Map()),
-  ].sort((a, b) => b[1] - a[1]);
+  ].sort((a, b) => {
+    if (a[1] === b[1]) {
+      return a[0].localeCompare(b[0]);
+    }
+    return b[1] - a[1];
+  });
 }
 
 /** returns most used tags
