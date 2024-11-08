@@ -12,11 +12,11 @@ const nextPageExists = allPosts.length > MAX_POSTS_PER_PAGE;
 
 const page = {
   currentPage: 1,
-  ...(nextPageExists && {
-    url: {
+  url: {
+    ...(nextPageExists && {
       next: "/blog/page/2",
-    },
-  }),
+    }),
+  },
   data: firstPagePostsByDate,
 };
 ---
