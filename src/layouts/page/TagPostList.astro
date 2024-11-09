@@ -14,13 +14,13 @@ const paginationProps = {
   ...(page.url.prev && {
     prevUrl: {
       text: `← 上一頁`,
-      url: page.currentPage === 2 ? `/blog/tags/${tag}/` : page.url.prev,
+      url: page.currentPage === 2 ? `/blog/tags/${tag}/` : page.url.prev + "/",
     },
   }),
   ...(page.url.next && {
     nextUrl: {
       text: `下一頁 →`,
-      url: page.url.next,
+      url: page.url.next + "/",
     },
   }),
 };
