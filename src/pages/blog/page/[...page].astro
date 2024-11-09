@@ -2,14 +2,14 @@
 import { getAllPosts, getTopTags } from "@/data/post";
 import BlogList from "@/layouts/page/BlogList.astro";
 import { collectionDateSort } from "@/utils/date";
+import { siteConfig } from "@/site-config";
 
 export const getStaticPaths = async ({ paginate }) => {
-  const MAX_POSTS_PER_PAGE = 10;
   const MAX_TAGS = 7;
   const allPosts = await getAllPosts();
   const uniqueTags = getTopTags(allPosts, MAX_TAGS);
   return paginate(allPosts.sort(collectionDateSort), {
-    pageSize: MAX_POSTS_PER_PAGE,
+    pageSize: siteConfig.postsPerPage,
     props: { uniqueTags },
   }).slice(1);
 };
