@@ -1,0 +1,38 @@
+---
+import { getAllPosts, getUniqueTags } from "@/data/post";
+import TagPostList from "@/layouts/page/TagPostList.astro";
+import { collectionDateSort } from "@/utils/date";
+import { siteConfig } from "@/site-config";
+
+export const getStaticPaths = async ({ paginate }) => {
+  const allPosts = await getAllPosts();
+  const sortedPosts = allPosts.sort(collectionDateSort);
+  const uniqueTags = getUniqueTags(sortedPosts);
+
+  return uniqueTags.flatMap((tag) => {
+    const filterPosts = sortedPosts.filter((post) => post.data.tags.includes(tag));
+    const firstPagePostsByDate = filterPosts.slice(0, siteConfig.postsPerPage);
+    const nextPageExists = filterPosts.length > siteConfig.postsPerPage;
+
+    return {
+      params: { tag },
+      props: {
+        page: {
+          currentPage: 1,
+          url: {
+            ...(nextPageExists && {
+              next: `/blog/tags/${tag}/page/2`,
+            }),
+          },
+          data: firstPagePostsByDate,
+        },
+      },
+    };
+  });
+};
+
+const { page } = Astro.props;
+const { tag } = Astro.params;
+---
+
+<TagPostList page={page} tag={tag} />

@@ -1,26 +1,9 @@
 ---
 import Pagination from "@/components/Paginator.astro";
 import PostPreview from "@/components/blog/PostPreview.astro";
-import { getAllPosts, getUniqueTags } from "@/data/post";
 import PageLayout from "@/layouts/Base.astro";
-import { collectionDateSort } from "@/utils/date";
 
-export const getStaticPaths = async ({ paginate }) => {
-  const allPosts = await getAllPosts();
-  const sortedPosts = allPosts.sort(collectionDateSort);
-  const uniqueTags = getUniqueTags(sortedPosts);
-
-  return uniqueTags.flatMap((tag) => {
-    const filterPosts = sortedPosts.filter((post) => post.data.tags.includes(tag));
-    return paginate(filterPosts, {
-      pageSize: 100,
-      params: { tag },
-    });
-  });
-};
-
-const { page } = Astro.props;
-const { tag } = Astro.params;
+const { page, tag } = Astro.props;
 
 const meta = {
   description: `檢視所有含有 ${tag} 標籤的文章`,
@@ -30,13 +13,13 @@ const meta = {
 const paginationProps = {
   ...(page.url.prev && {
     prevUrl: {
-      text: `← Previous Tags`,
-      url: page.url.prev,
+      text: `← 上一頁`,
+      url: page.currentPage === 2 ? `/blog/tags/${tag}/` : page.url.prev,
     },
   }),
   ...(page.url.next && {
     nextUrl: {
-      text: `Next Tags →`,
+      text: `下一頁 →`,
       url: page.url.next,
     },
   }),
