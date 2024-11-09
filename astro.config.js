@@ -10,9 +10,9 @@ import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import remarkUnwrapImages from "remark-unwrap-images";
 import remarkGithubAlerts from "./src/utils/remark-github-alerts";
+import remarkReadingTime from "./src/utils/remark-reading-time";
+import rehypeExcerpt from "./src/utils/rehype-post-excerpt";
 import { expressiveCodeOptions } from "./src/site.config";
-import { remarkReadingTime } from "./src/utils/remark-reading-time";
-import { rehypeExcerpt } from "./src/utils/rehype-post-excerpt";
 
 // https://astro.build/config
 export default defineConfig({

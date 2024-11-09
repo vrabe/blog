@@ -2,7 +2,7 @@ import { truncate } from "hast-util-truncate";
 import { toText as hastToText } from "hast-util-to-text";
 import { collapseWhiteSpace } from "collapse-white-space";
 
-export function rehypeExcerpt(options) {
+function rehypeExcerpt(options) {
   const excerptLimit = options?.limit ?? 200;
   return (tree, file) => {
     const { frontmatter } = file.data.astro;
@@ -13,3 +13,5 @@ export function rehypeExcerpt(options) {
     frontmatter.excerpt = collapseWhiteSpace(hastToText(fragment));
   };
 }
+
+export default rehypeExcerpt;
