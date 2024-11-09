@@ -20,6 +20,8 @@ export const siteConfig = {
   title: "鰭狀漏斗",
   // Timezone of the time of the posts
   timezone: "Asia/Taipei",
+  // Max posts quantity in each paginated page
+  postsPerPage: 10,
 };
 
 // Used to generate links in both the Header & Footer.
