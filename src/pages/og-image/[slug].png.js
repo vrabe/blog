@@ -4,6 +4,7 @@ import { getFormattedDate } from "@/utils/date";
 import { Resvg } from "@resvg/resvg-js";
 import satori from "satori";
 import { html } from "satori-html";
+import { createHash } from "node:crypto";
 
 const PTSans = fs.readFileSync("src/assets/PTSans-Regular.ttf");
 const PTSansBold = fs.readFileSync("src/assets/PTSans-Bold.ttf");
@@ -62,15 +63,34 @@ const markup = (title, pubDate) =>
     </div>
   </div>`;
 
+const cacheDirPath = "node_modules/.og-images";
+
 export async function GET(context) {
   const { pubDate, title } = context.props;
+  const { slug } = context.params;
+  const hash = createHash("sha256").update(`${title}-${pubDate}`).digest("hex").substring(0, 8);
+  const cacheFilePath = `${cacheDirPath}/${slug}-${hash}.png`;
 
-  const postDate = getFormattedDate(pubDate, {
-    month: "long",
-    weekday: "long",
-  });
-  const svg = await satori(markup(title, postDate), ogOptions);
-  const png = new Resvg(svg).render().asPng();
+  if (!fs.existsSync(cacheFilePath)) {
+    fs.mkdirSync(cacheDirPath, { recursive: true });
+
+    // Remove old og images if there is a newer version
+    fs.readdirSync(cacheDirPath).forEach((fileName) => {
+      if (fileName.startsWith(slug)) {
+        fs.rmSync(`${cacheDirPath}/${fileName}`);
+      }
+    });
+
+    const postDate = getFormattedDate(pubDate, {
+      month: "long",
+      weekday: "long",
+    });
+    const svg = await satori(markup(title, postDate), ogOptions);
+    fs.writeFileSync(cacheFilePath, new Resvg(svg).render().asPng());
+  }
+
+  const png = fs.readFileSync(cacheFilePath);
+
   return new Response(png, {
     headers: {
       "Cache-Control": "public, max-age=31536000, immutable",
