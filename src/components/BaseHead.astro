@@ -19,6 +19,25 @@ const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const socialImageURL = new URL(ogImage ? ogImage : "/social-card.png", Astro.url).href;
 const isTagPage = /\/blog\/tags/.test(Astro.url.pathname);
+
+const blogJsonLd = createdTime && {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": canonicalURL,
+  },
+  headline: title,
+  description: description,
+  image: socialImageURL,
+  author: {
+    "@type": "Person",
+    name: siteConfig.author,
+    url: Astro.site,
+  },
+  datePublished: createdTime,
+  dateModified: updatedTime,
+};
 ---
 
 <meta charset="utf-8" />
@@ -67,6 +86,9 @@ const isTagPage = /\/blog\/tags/.test(Astro.url.pathname);
 <meta content={title} property="twitter:title" />
 <meta content={description} property="twitter:description" />
 <meta content={socialImageURL} property="twitter:image" />
+
+{/* JSON-LD */}
+{createdTime && <script type="application/ld+json" set:html={JSON.stringify(blogJsonLd)} />}
 
 {/* Sitemap */}
 <link href="/sitemap-index.xml" rel="sitemap" />
