@@ -6,9 +6,9 @@ import expressiveCode from "astro-expressive-code";
 import matomo from "astro-matomo";
 import icon from "astro-icon";
 import rehypeExternalLinks from "rehype-external-links";
+import rehypeUnwrapImages from "rehype-unwrap-images";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
-import remarkUnwrapImages from "remark-unwrap-images";
 import remarkGithubAlerts from "./src/utils/remark-github-alerts";
 import remarkReadingTime from "./src/utils/remark-reading-time";
 import rehypeExcerpt from "./src/utils/rehype-post-excerpt";
@@ -38,6 +38,7 @@ export default defineConfig({
     rehypePlugins: [
       rehypeExcerpt,
       rehypeKatex,
+      rehypeUnwrapImages,
       [
         rehypeExternalLinks,
         {
@@ -46,7 +47,7 @@ export default defineConfig({
         },
       ],
     ],
-    remarkPlugins: [remarkUnwrapImages, remarkReadingTime, remarkGithubAlerts, remarkMath],
+    remarkPlugins: [remarkReadingTime, remarkGithubAlerts, remarkMath],
     remarkRehype: {
       footnoteLabelProperties: {
         className: [""],
