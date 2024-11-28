@@ -1,0 +1,24 @@
+---
+import { render } from "astro:content";
+import { getAllDrafts } from "@/data/post";
+import PostLayout from "@/layouts/BlogPost.astro";
+
+export const getStaticPaths = async () => {
+  // Only render these pages in development mode.
+  if (import.meta.env.PROD) {
+    return [];
+  }
+  const draftEntries = await getAllDrafts();
+  return draftEntries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+};
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<PostLayout post={entry}>
+  <Content />
+</PostLayout>
