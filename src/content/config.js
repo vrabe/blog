@@ -19,7 +19,6 @@ const blog = defineCollection({
     updated: z.string().transform((str) => new TZDate(str, siteConfig.timezone)),
     categories: z.array(z.string()).nullable().default([]).transform(removeDupsAndLowerCase),
     tags: z.array(z.string()).nullable().default([]).transform(removeDupsAndLowerCase),
-    draft: z.boolean().default(false),
   }),
 });
 

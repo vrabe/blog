@@ -6,7 +6,6 @@ const { as: Tag = "div", post } = Astro.props;
 
 <FormattedDate class="min-w-[120px] text-gray-600 dark:text-gray-400" date={post.data.created} />
 <Tag>
-  {post.data.draft && <span class="text-red-500">(Draft) </span>}
   <a class="cactus-link" data-astro-prefetch href={`/blog/${post.id}/`}>
     {post.data.title}
   </a>

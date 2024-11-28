@@ -2,9 +2,7 @@ import { getCollection } from "astro:content";
 
 /** filter out draft posts based on the environment */
 export async function getAllPosts() {
-  return await getCollection("blog", ({ data }) => {
-    return import.meta.env.PROD ? !data.draft : true;
-  });
+  return await getCollection("blog");
 }
 
 export async function getAllDrafts() {
