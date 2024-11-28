@@ -24,6 +24,15 @@ export const siteConfig = {
   postsPerPage: 10,
 };
 
+const devMenuLinks = import.meta.env.PROD
+  ? []
+  : [
+      {
+        path: "/drafts/",
+        title: "Drafts",
+      },
+    ];
+
 // Used to generate links in both the Header & Footer.
 export const menuLinks = [
   {
@@ -38,7 +47,7 @@ export const menuLinks = [
     path: "/blog/",
     title: "Blog",
   },
-];
+].concat(devMenuLinks);
 
 // https://expressive-code.com/reference/configuration/
 export const expressiveCodeOptions = {
