@@ -64,6 +64,6 @@ export default defineConfig({
     },
   },
   experimental: {
-    contentLayer: true,
+    svg: true,
   },
 });
