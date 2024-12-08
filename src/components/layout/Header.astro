@@ -1,16 +1,13 @@
 ---
+import Search from "@/components/Search.astro";
+import ThemeToggle from "@/components/ThemeToggle.astro";
 import { menuLinks, siteConfig } from "@/site.config";
-
-import Search from "../Search.astro";
-import ThemeToggle from "../ThemeToggle.astro";
-
-const url = new URL(Astro.request.url);
 ---
 
 <header class="group relative mb-28 flex items-center" id="main-header">
   <div class="flex sm:flex-col">
     <a
-      aria-current={url.pathname === "/" ? "page" : false}
+      aria-current={Astro.url.pathname === "/" ? "page" : false}
       class="inline-flex items-center sm:relative sm:inline-block"
       href="/"
     >
@@ -24,7 +21,7 @@ const url = new URL(Astro.request.url);
       {
         menuLinks.map((link) => (
           <a
-            aria-current={url.pathname === link.path ? "page" : false}
+            aria-current={Astro.url.pathname === link.path ? "page" : false}
             class="px-4 py-4 underline-offset-2 sm:py-0 sm:hover:underline"
             data-astro-prefetch
             href={link.path}
