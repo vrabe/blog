@@ -12,7 +12,7 @@ function removeDupsAndLowerCase(array) {
 }
 
 const blog = defineCollection({
-  loader: glob({ pattern: "**/*.mdx", base: "../blog-posts/content/blog" }),
+  loader: glob({ base: "../blog-posts/content/blog", pattern: "**/*.mdx" }),
   schema: z.object({
     title: z.string(),
     created: z.string().transform((str) => new TZDate(str, siteConfig.timezone)),
@@ -23,7 +23,7 @@ const blog = defineCollection({
 });
 
 const drafts = defineCollection({
-  loader: glob({ pattern: "**/*.mdx", base: "../blog-posts/content/draft" }),
+  loader: glob({ base: "../blog-posts/content/draft", pattern: "**/*.mdx" }),
   schema: z.object({
     title: z
       .string()
