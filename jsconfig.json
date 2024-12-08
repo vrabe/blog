@@ -8,7 +8,7 @@
       "@/data/*": ["src/data/*"],
       "@/layouts/*": ["src/layouts/*"],
       "@/utils/*": ["src/utils/*"],
-      "@/site-config": ["src/site.config.js"]
+      "@/site.config": ["src/site.config.js"]
     }
   },
   "include": ["**/*", "**/*.astro"],

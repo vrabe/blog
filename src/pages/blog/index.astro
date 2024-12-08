@@ -2,7 +2,7 @@
 import { getAllPosts, getTopTags } from "@/data/post";
 import BlogList from "@/layouts/page/BlogList.astro";
 import { collectionDateSort } from "@/utils/date";
-import { siteConfig } from "@/site-config";
+import { siteConfig } from "@/site.config";
 
 const MAX_TAGS = 7;
 const allPosts = await getAllPosts();

@@ -1,5 +1,5 @@
 import { getAllPosts } from "@/data/post";
-import { siteConfig } from "@/site-config";
+import { siteConfig } from "@/site.config";
 import { getFormattedDate } from "@/utils/date";
 import { Resvg } from "@resvg/resvg-js";
 import satori from "satori";

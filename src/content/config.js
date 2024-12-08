@@ -1,7 +1,7 @@
 import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
 import { TZDate } from "@date-fns/tz";
-import { siteConfig } from "@/site-config";
+import { siteConfig } from "@/site.config";
 
 function removeDupsAndLowerCase(array) {
   if (!array || !array.length) return array;
