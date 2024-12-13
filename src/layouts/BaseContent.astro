@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "./Base.astro";
 
-const { meta } = Astro.props;
+const { meta, showAd } = Astro.props;
 ---
 
 <BaseLayout meta={meta}>
@@ -14,6 +14,17 @@ const { meta } = Astro.props;
       <slot />
     </article>
   </div>
+  {
+    showAd && (
+      <ins
+        class="adsbygoogle mb-5 mt-10 block data-[ad-status=unfilled]:!hidden"
+        data-ad-client="ca-pub-2628442340171104"
+        data-ad-slot="6159487389"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
+    )
+  }
   <button
     aria-label="Back to Top"
     class="z-90 fixed bottom-8 end-4 flex h-10 w-10 translate-y-28 items-center justify-center rounded-full border-2 border-transparent bg-zinc-200 text-3xl opacity-0 transition-all duration-300 hover:border-link data-[show=true]:translate-y-0 data-[show=true]:opacity-100 dark:bg-zinc-700 sm:end-8 sm:h-12 sm:w-12"
@@ -33,6 +44,10 @@ const { meta } = Astro.props;
     </svg>
   </button>
 </BaseLayout>
+
+<script is:inline>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 <script>
   const scrollBtn = document.getElementById("to-top-btn");
