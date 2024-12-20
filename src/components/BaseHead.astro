@@ -1,5 +1,6 @@
 ---
 import { siteConfig } from "@/site.config";
+import { pageMetadata } from "@/stores/pageMetadata";
 
 import "@/styles/global.css";
 
@@ -12,7 +13,7 @@ import "@fontsource/b612-mono/700.css";
 import "@/styles/markdownAlert.css";
 import "katex/dist/katex.min.css";
 
-const { createdTime, updatedTime, description, ogImage, title } = Astro.props;
+const { createdTime, updatedTime, description, ogImage, title } = pageMetadata.get();
 
 const titleSeparator = "•";
 const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`;
