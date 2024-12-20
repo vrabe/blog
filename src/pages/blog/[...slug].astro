@@ -2,6 +2,7 @@
 import { render } from "astro:content";
 import PostLayout from "@/layouts/BlogPost.astro";
 import { getAllPosts } from "@/data/post";
+import { pageMetadata } from "@/stores/pageMetadata";
 
 export const getStaticPaths = async () => {
   const blogEntries = await getAllPosts();
@@ -12,7 +13,22 @@ export const getStaticPaths = async () => {
 };
 
 const { entry } = Astro.props;
-const { Content } = await render(entry);
+const {
+  Content,
+  remarkPluginFrontmatter: { excerpt },
+} = await render(entry);
+const {
+  data: { created, title, updated },
+  id,
+} = entry;
+
+pageMetadata.set({
+  created,
+  updated,
+  title,
+  description: excerpt,
+  ogImage: `/og-image/${id}.png`,
+});
 ---
 
 <PostLayout post={entry}>
