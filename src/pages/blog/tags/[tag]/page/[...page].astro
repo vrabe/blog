@@ -3,6 +3,7 @@ import { getAllPosts, getUniqueTags } from "@/data/post";
 import TagPostList from "@/layouts/page/TagPostList.astro";
 import { collectionDateSort } from "@/utils/date";
 import { siteConfig } from "@/site.config";
+import { pageMetadata } from "@/stores/pageMetadata";
 
 export const getStaticPaths = async ({ paginate }) => {
   const allPosts = await getAllPosts();
@@ -20,6 +21,11 @@ export const getStaticPaths = async ({ paginate }) => {
 
 const { page } = Astro.props;
 const { tag } = Astro.params;
+
+pageMetadata.set({
+  description: `檢視所有含有 ${tag} 標籤的文章`,
+  title: `Tag: ${tag}`,
+});
 ---
 
 <TagPostList page={page} tag={tag} />

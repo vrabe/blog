@@ -3,6 +3,7 @@ import { getAllPosts, getTopTags } from "@/data/post";
 import BlogList from "@/layouts/page/BlogList.astro";
 import { collectionDateSort } from "@/utils/date";
 import { siteConfig } from "@/site.config";
+import { pageMetadata } from "@/stores/pageMetadata";
 
 const MAX_TAGS = 7;
 const allPosts = await getAllPosts();
@@ -19,6 +20,11 @@ const page = {
   },
   data: firstPagePostsByDate,
 };
+
+pageMetadata.set({
+  description: "部落格文章列表",
+  title: "Posts",
+});
 ---
 
 <BlogList page={page} uniqueTags={uniqueTags} />

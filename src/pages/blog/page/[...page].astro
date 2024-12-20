@@ -3,6 +3,7 @@ import { getAllPosts, getTopTags } from "@/data/post";
 import BlogList from "@/layouts/page/BlogList.astro";
 import { collectionDateSort } from "@/utils/date";
 import { siteConfig } from "@/site.config";
+import { pageMetadata } from "@/stores/pageMetadata";
 
 export const getStaticPaths = async ({ paginate }) => {
   const MAX_TAGS = 7;
@@ -15,6 +16,11 @@ export const getStaticPaths = async ({ paginate }) => {
 };
 
 const { page, uniqueTags } = Astro.props;
+
+pageMetadata.set({
+  description: "部落格文章列表",
+  title: "Posts",
+});
 ---
 
 <BlogList page={page} uniqueTags={uniqueTags} />
