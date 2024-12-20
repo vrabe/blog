@@ -1,7 +1,3 @@
 import { atom } from "nanostores";
-import { siteConfig } from "@/site.config";
 
-export const pageMetadata = atom({
-  description: siteConfig.description,
-  ogImage: "/social-card.png",
-});
+export const pageMetadata = atom({});
