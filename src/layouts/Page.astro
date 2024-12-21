@@ -1,8 +1,14 @@
 ---
+import { pageMetadata } from "@/stores/pageMetadata";
 import BaseContentLayout from "./BaseContent.astro";
 
 const { frontmatter } = Astro.props;
 const { title, description } = frontmatter;
+
+pageMetadata.set({
+  description,
+  title,
+});
 ---
 
 <BaseContentLayout
