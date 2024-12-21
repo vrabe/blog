@@ -2,18 +2,13 @@
 import { pageMetadata } from "@/stores/pageMetadata";
 import PageLayout from "@/layouts/Base.astro";
 
-const meta = {
-  description: "哎呀！看來這個頁面已經消失在太空中了！",
-  title: "哎呀！你發現了消失的頁面！",
-};
-
 pageMetadata.set({
   description: "哎呀！看來這個頁面已經消失在太空中了！",
   title: "哎呀！你發現了消失的頁面！",
 });
 ---
 
-<PageLayout meta={meta}>
+<PageLayout>
   <h1 class="title mb-6">404 | 找不到網頁</h1>
   <p class="mb-8">請使用導覽列回去</p>
 </PageLayout>

@@ -5,21 +5,11 @@ import ThemeProvider from "@/components/ThemeProvider.astro";
 import Footer from "@/components/layout/Footer.astro";
 import Header from "@/components/layout/Header.astro";
 import { siteConfig } from "@/site.config";
-
-const {
-  meta: { createdTime, updatedTime, description = siteConfig.description, ogImage, title },
-} = Astro.props;
 ---
 
 <html class="scroll-smooth" lang={siteConfig.lang}>
   <head>
-    <BaseHead
-      createdTime={createdTime}
-      updatedTime={updatedTime}
-      description={description}
-      ogImage={ogImage}
-      title={title}
-    />
+    <BaseHead />
   </head>
   <body
     class="mx-auto flex min-h-screen max-w-3xl flex-col bg-bgColor px-4 pt-16 text-base font-normal text-textColor antialiased sm:px-8"

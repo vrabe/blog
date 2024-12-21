@@ -16,15 +16,7 @@ const socialImage = `/og-image/${id}.png`;
 const { headings, remarkPluginFrontmatter } = await render(post);
 ---
 
-<BaseContentLayout
-  meta={{
-    createdTime,
-    updatedTime,
-    description: remarkPluginFrontmatter.excerpt,
-    ogImage: socialImage,
-    title,
-  }}
->
+<BaseContentLayout>
   {!!headings.length && <TOC headings={headings} slot="toc" />}
   <BlogHero content={post} readingTime={remarkPluginFrontmatter.readingTime} slot="hero" />
   <div

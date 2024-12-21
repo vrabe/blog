@@ -6,18 +6,13 @@ import { pageMetadata } from "@/stores/pageMetadata";
 const allPosts = await getAllPosts();
 const allTags = getUniqueTagsWithCount(allPosts);
 
-const meta = {
-  description: "文章中出現過的標籤列表",
-  title: "All Tags",
-};
-
 pageMetadata.set({
   description: "文章中出現過的標籤列表",
   title: "All Tags",
 });
 ---
 
-<PageLayout meta={meta}>
+<PageLayout>
   <h1 class="title mb-6">Tags</h1>
   <ul class="space-y-4">
     {
