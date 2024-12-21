@@ -13,7 +13,14 @@ import "@fontsource/b612-mono/700.css";
 import "@/styles/markdownAlert.css";
 import "katex/dist/katex.min.css";
 
-const { created, updated, description, ogImage, title, types } = pageMetadata.get();
+const {
+  created,
+  updated,
+  description,
+  ogImage = "/social-card.png",
+  title,
+  types = [],
+} = pageMetadata.get();
 
 const isPost = ["post", "draft"].some((t) => types.includes(t));
 const isTag = types.includes("tag");
@@ -21,13 +28,15 @@ const isTag = types.includes("tag");
 const titleSeparator = "•";
 const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const socialImageURL = new URL(ogImage ? ogImage : "/social-card.png", Astro.url).href;
+const socialImageURL = new URL(ogImage, Astro.url).href;
+
+let createdTime, updatedTime, blogJsonLd;
 
 if (isPost) {
-  const createdTime = created.toISOString();
-  const updatedTime = updated.toISOString();
+  createdTime = created.toISOString();
+  updatedTime = updated.toISOString();
 
-  const blogJsonLd = createdTime && {
+  blogJsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     mainEntityOfPage: {
