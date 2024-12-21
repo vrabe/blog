@@ -6,13 +6,6 @@ import TOC from "@/components/blog/TOC.astro";
 import BaseContentLayout from "./BaseContent.astro";
 
 const { post } = Astro.props;
-const {
-  data: { created, title, updated },
-  id,
-} = post;
-const createdTime = created.toISOString();
-const updatedTime = updated.toISOString();
-const socialImage = `/og-image/${id}.png`;
 const { headings, remarkPluginFrontmatter } = await render(post);
 ---
 
