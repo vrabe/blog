@@ -1,16 +1,17 @@
 ---
+import { pageMetadata } from "@/stores/pageMetadata";
 import BaseContentLayout from "./BaseContent.astro";
 
 const { frontmatter } = Astro.props;
 const { title, description } = frontmatter;
+
+pageMetadata.set({
+  description,
+  title,
+});
 ---
 
-<BaseContentLayout
-  meta={{
-    description,
-    title,
-  }}
->
+<BaseContentLayout>
   <h1 class="title mb-6" slot="hero">{title}</h1>
   <div
     class="prose prose-cactus text-base prose-headings:font-semibold prose-headings:text-accent-2 prose-th:before:content-none"

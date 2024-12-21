@@ -5,28 +5,12 @@ import TOC from "@/components/blog/TOC.astro";
 
 import BaseContentLayout from "./BaseContent.astro";
 
-const { post } = Astro.props;
-const {
-  data: { created, title, updated },
-  id,
-} = post;
-const createdTime = created.toISOString();
-const updatedTime = updated.toISOString();
-const socialImage = `/og-image/${id}.png`;
-const { headings, remarkPluginFrontmatter } = await render(post);
+const { post, headings, readingTime } = Astro.props;
 ---
 
-<BaseContentLayout
-  meta={{
-    createdTime,
-    updatedTime,
-    description: remarkPluginFrontmatter.excerpt,
-    ogImage: socialImage,
-    title,
-  }}
->
+<BaseContentLayout>
   {!!headings.length && <TOC headings={headings} slot="toc" />}
-  <BlogHero content={post} readingTime={remarkPluginFrontmatter.readingTime} slot="hero" />
+  <BlogHero content={post} readingTime={readingTime} slot="hero" />
   <div
     class="prose prose-cactus mt-12 text-base prose-headings:font-semibold prose-headings:text-accent-2 prose-headings:before:absolute prose-headings:before:-ms-5 prose-headings:before:text-accent sm:prose-headings:before:content-['#'] sm:prose-th:before:content-none"
   >

@@ -5,11 +5,6 @@ import PageLayout from "@/layouts/Base.astro";
 
 const { page, tag } = Astro.props;
 
-const meta = {
-  description: `檢視所有含有 ${tag} 標籤的文章`,
-  title: `Tag: ${tag}`,
-};
-
 const paginationProps = {
   ...(page.url.prev && {
     prevUrl: {
@@ -26,7 +21,7 @@ const paginationProps = {
 };
 ---
 
-<PageLayout meta={meta}>
+<PageLayout>
   <h1 class="title mb-6 flex items-center">
     <a class="text-accent sm:hover:underline" href="/blog/tags/">Tags</a>
     <span class="me-3 ms-2">→</span>

@@ -3,13 +3,20 @@ import PostPreview from "@/components/blog/PostPreview.astro";
 import { getAllPosts } from "@/data/post";
 import PageLayout from "@/layouts/Base.astro";
 import { collectionDateSort } from "@/utils/date";
+import { pageMetadata } from "@/stores/pageMetadata";
+import { siteConfig } from "@/site.config";
 
 const MAX_POSTS = 10;
 const allPosts = await getAllPosts();
 const allPostsByDate = allPosts.sort(collectionDateSort).slice(0, MAX_POSTS);
+
+pageMetadata.set({
+  description: siteConfig.description,
+  title: "Home",
+});
 ---
 
-<PageLayout meta={{ title: "Home" }}>
+<PageLayout>
   <section aria-label="Blog post list" class="mt-16">
     <h2 class="title mb-6 text-xl text-accent">最新文章</h2>
     <ul class="space-y-4">

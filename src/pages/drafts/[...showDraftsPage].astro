@@ -1,6 +1,7 @@
 ---
 import { getAllDrafts } from "@/data/post";
 import { collectionDateSort } from "@/utils/date";
+import { pageMetadata } from "@/stores/pageMetadata";
 import PageLayout from "@/layouts/Base.astro";
 
 export const getStaticPaths = () => {
@@ -17,13 +18,13 @@ export const getStaticPaths = () => {
 
 const drafts = (await getAllDrafts()).sort(collectionDateSort);
 
-const meta = {
+pageMetadata.set({
   description: "部落格草稿列表",
   title: "Drafts",
-};
+});
 ---
 
-<PageLayout meta={meta}>
+<PageLayout>
   <h1 class="title mb-6 flex items-center gap-3">Drafts</h1>
   <div class="grid gap-y-16 sm:grid-cols-[3fr_1fr] sm:gap-x-8">
     <section aria-label="Blog post list">
