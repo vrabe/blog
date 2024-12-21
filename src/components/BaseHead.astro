@@ -15,32 +15,37 @@ import "katex/dist/katex.min.css";
 
 const { created, updated, description, ogImage, title, types } = pageMetadata.get();
 
+const isPost = ["post", "draft"].some((t) => types.includes(t));
+const isTag = types.includes("tag");
+
 const titleSeparator = "•";
 const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const socialImageURL = new URL(ogImage ? ogImage : "/social-card.png", Astro.url).href;
-const isTagPage = /\/blog\/tags/.test(Astro.url.pathname);
-const createdTime = created?.toISOString();
-const updatedTime = updated?.toISOString();
 
-const blogJsonLd = createdTime && {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  mainEntityOfPage: {
-    "@type": "WebPage",
-    "@id": canonicalURL,
-  },
-  headline: title,
-  description: description,
-  image: socialImageURL,
-  author: {
-    "@type": "Person",
-    name: siteConfig.author,
-    url: Astro.site,
-  },
-  datePublished: createdTime,
-  dateModified: updatedTime,
-};
+if (isPost) {
+  const createdTime = created.toISOString();
+  const updatedTime = updated.toISOString();
+
+  const blogJsonLd = createdTime && {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": canonicalURL,
+    },
+    headline: title,
+    description: description,
+    image: socialImageURL,
+    author: {
+      "@type": "Person",
+      name: siteConfig.author,
+      url: Astro.site,
+    },
+    datePublished: createdTime,
+    dateModified: updatedTime,
+  };
+}
 ---
 
 <meta charset="utf-8" />
@@ -64,7 +69,7 @@ const blogJsonLd = createdTime && {
 <meta content="" name="theme-color" />
 
 {/* Open Graph / Facebook */}
-<meta content={createdTime ? "article" : "website"} property="og:type" />
+<meta content={isPost ? "article" : "website"} property="og:type" />
 <meta content={title} property="og:title" />
 <meta content={description} property="og:description" />
 <meta content={canonicalURL} property="og:url" />
@@ -74,14 +79,16 @@ const blogJsonLd = createdTime && {
 <meta content="1200" property="og:image:width" />
 <meta content="630" property="og:image:height" />
 {
-  createdTime && (
+  isPost && (
     <>
       <meta content={siteConfig.author} property="article:author" />
       <meta content={createdTime} property="article:published_time" />
+      <meta content={updatedTime} property="article:modified_time" />
+      {/* JSON-LD */}
+      <script type="application/ld+json" set:html={JSON.stringify(blogJsonLd)} />
     </>
   )
 }
-{updatedTime && <meta content={updatedTime} property="article:modified_time" />}
 
 {/* Twitter */}
 <meta content="summary_large_image" property="twitter:card" />
@@ -90,9 +97,6 @@ const blogJsonLd = createdTime && {
 <meta content={description} property="twitter:description" />
 <meta content={socialImageURL} property="twitter:image" />
 
-{/* JSON-LD */}
-{createdTime && <script type="application/ld+json" set:html={JSON.stringify(blogJsonLd)} />}
-
 {/* Sitemap */}
 <link href="/sitemap-index.xml" rel="sitemap" />
 
@@ -100,11 +104,11 @@ const blogJsonLd = createdTime && {
 <link href="/rss.xml" rel="alternate" title={siteConfig.title} type="application/rss+xml" />
 
 {/* No Index for tag pages */}
-{isTagPage && <meta content="noindex" name="robots" />}
+{isTag && <meta content="noindex" name="robots" />}
 
 {/* Adsense */}
 {
-  !isTagPage && (
+  !isTag && (
     <script
       async
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2628442340171104"
