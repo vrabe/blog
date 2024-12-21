@@ -1,6 +1,7 @@
 ---
 import { getAllDrafts } from "@/data/post";
 import { collectionDateSort } from "@/utils/date";
+import { pageMetadata } from "@/stores/pageMetadata";
 import PageLayout from "@/layouts/Base.astro";
 
 export const getStaticPaths = () => {
@@ -21,6 +22,11 @@ const meta = {
   description: "部落格草稿列表",
   title: "Drafts",
 };
+
+pageMetadata.set({
+  description: "部落格草稿列表",
+  title: "Drafts",
+});
 ---
 
 <PageLayout meta={meta}>

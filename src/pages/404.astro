@@ -1,10 +1,16 @@
 ---
+import { pageMetadata } from "@/stores/pageMetadata";
 import PageLayout from "@/layouts/Base.astro";
 
 const meta = {
   description: "哎呀！看來這個頁面已經消失在太空中了！",
   title: "哎呀！你發現了消失的頁面！",
 };
+
+pageMetadata.set({
+  description: "哎呀！看來這個頁面已經消失在太空中了！",
+  title: "哎呀！你發現了消失的頁面！",
+});
 ---
 
 <PageLayout meta={meta}>
