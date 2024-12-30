@@ -68,7 +68,7 @@ const cacheDirPath = "node_modules/.og-images";
 export async function GET(context) {
   const { pubDate, title } = context.props;
   const { slug } = context.params;
-  const hash = createHash("sha256").update(`${title}-${pubDate}`).digest("hex").substring(0, 8);
+  const hash = createHash("sha256").update(`${title}-${pubDate.getTime()}`).digest("hex").substring(0, 8);
   const cacheFilePath = `${cacheDirPath}/${slug}-${hash}.png`;
 
   if (!fs.existsSync(cacheFilePath)) {
