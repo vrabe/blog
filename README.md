@@ -36,6 +36,16 @@ A content only alert:
 > It's a note without title.
 ```
 
+### Available Alerts
+
+- ~~TIP~~
+- NOTE
+- ~~IMPORTANT~~
+- WARNING
+- ~~CAUTION~~
+
+~~type~~: Style not implemented.
+
 ## Acknowledgments
 
 The blog uses the following code:
