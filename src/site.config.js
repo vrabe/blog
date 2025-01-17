@@ -21,7 +21,7 @@ export const siteConfig = {
   // Timezone of the time of the posts
   timezone: "Asia/Taipei",
   // Max posts quantity in each paginated page
-  postsPerPage: 10,
+  postsPerPage: 15,
 };
 
 const devMenuLinks = import.meta.env.PROD
