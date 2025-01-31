@@ -2,7 +2,22 @@
 
 My blog: <https://vrabe.tw>
 
-## Remark Alerts
+The site is modified from [chrismwilliams/astro-theme-cactus](https://github.com/chrismwilliams/astro-theme-cactus) and updated from it regularly. (Currently updated to v5.0.0)
+
+It's not designed to be a template. If you want to use it, don't deploy it directly. You need to edit config and do other necessary changes first.
+
+## Main Difference
+
+- No TypeScript
+- No Webmentions
+- No notes
+- Frontmatter fields are different
+- Admonition implementation is different
+- Some style changes
+
+## Cheat Sheet
+
+### Remark Alerts
 
 A normal alert:
 
@@ -36,7 +51,7 @@ A content only alert:
 > It's a note without title.
 ```
 
-### Available Alerts
+#### Available Alerts
 
 - ~~TIP~~
 - NOTE

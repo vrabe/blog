@@ -15,7 +15,7 @@
     "distribute": "pnpm build && pnpm upload:s3"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.0.7",
+    "@astrojs/mdx": "^4.0.8",
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.2.1",
     "@astrojs/tailwind": "^5.1.5",
@@ -26,7 +26,7 @@
     "@pagefind/default-ui": "^1.3.0",
     "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/typography": "^0.5.16",
-    "astro": "^5.1.9",
+    "astro": "^5.2.1",
     "astro-expressive-code": "^0.38.3",
     "astro-icon": "^1.1.5",
     "astro-matomo": "^1.7.0",
