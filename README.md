@@ -6,7 +6,7 @@ The site is modified from [chrismwilliams/astro-theme-cactus](https://github.com
 
 It's not designed to be a template. If you want to use it, don't deploy it directly. You need to edit config and do other necessary changes first.
 
-## Main Difference
+## Main Differences
 
 - No TypeScript
 - No Webmentions
