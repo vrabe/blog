@@ -25,9 +25,11 @@ pageMetadata.set({
 ---
 
 <PageLayout>
-  <h1 class="title mb-6 flex items-center gap-3">Drafts</h1>
-  <div class="grid gap-y-16 sm:grid-cols-[3fr_1fr] sm:gap-x-8">
-    <section aria-label="Blog post list">
+  <div class="mb-6 flex items-center gap-3">
+    <h1 class="title">Drafts</h1>
+  </div>
+  <div class="grid sm:grid-cols-[3fr_1fr] sm:gap-x-8 sm:gap-y-16">
+    <div>
       <ul class="mb-16 mt-5 space-y-4 text-start">
         {
           drafts.map((p) => (
@@ -41,6 +43,6 @@ pageMetadata.set({
           ))
         }
       </ul>
-    </section>
+    </div>
   </div>
 </PageLayout>

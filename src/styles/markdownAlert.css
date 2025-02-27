@@ -16,7 +16,7 @@
 }
 
 .markdown-alert-note {
-  @apply border-blue-600 dark:border-blue-400 bg-blue-100/25 dark:bg-blue-950/25;
+  @apply border-blue-600 bg-blue-100/25 dark:border-blue-400 dark:bg-blue-950/25;
 }
 
 .markdown-alert-note .octicon {
@@ -24,7 +24,7 @@
 }
 
 .markdown-alert-warning {
-  @apply border-orange-400 dark:border-yellow-400 bg-yellow-50/25 dark:bg-yellow-950/15;
+  @apply border-orange-400 bg-yellow-50/25 dark:border-yellow-400 dark:bg-yellow-950/15;
 }
 
 .markdown-alert-warning .octicon {

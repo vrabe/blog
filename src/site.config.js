@@ -22,6 +22,8 @@ export const siteConfig = {
   timezone: "Asia/Taipei",
   // Max posts quantity in each paginated page
   postsPerPage: 15,
+  // ! Please remember to replace the following site property with your own domain
+  url: "https://vrabe.tw/",
 };
 
 const devMenuLinks = import.meta.env.PROD

@@ -3,21 +3,22 @@ import BaseLayout from "./Base.astro";
 ---
 
 <BaseLayout>
-  <div class="gap-x-10 lg:flex lg:items-start">
-    <slot name="toc" />
-    <article class="flex-grow break-words min-w-0 max-w-full" data-pagefind-body>
-      <div id="hero">
-        <slot name="hero" />
-      </div>
+  <article class="grow break-words" data-pagefind-body>
+    <div id="blog-hero" class="mb-12"><slot name="hero" /></div>
+    <div class="flex flex-col gap-10 lg:flex-row lg:items-start">
+      <slot name="toc" />
       <slot />
-    </article>
-  </div>
+    </div>
+  </article>
+  <slot name="ads" />
   <button
     aria-label="Back to Top"
-    class="z-90 fixed bottom-8 end-4 flex h-10 w-10 translate-y-28 items-center justify-center rounded-full border-2 border-transparent bg-zinc-200 text-3xl opacity-0 transition-all duration-300 hover:border-link data-[show=true]:translate-y-0 data-[show=true]:opacity-100 dark:bg-zinc-700 sm:end-8 sm:h-12 sm:w-12"
+    class="transition-discrete fixed bottom-8 end-4 z-90 flex h-10 w-10 translate-y-28 cursor-pointer items-center justify-center rounded-full border-2 border-transparent bg-zinc-200 text-3xl opacity-0 transition-all duration-300 hover:border-link data-[show=true]:translate-y-0 data-[show=true]:opacity-100 dark:bg-zinc-700 sm:end-8 sm:h-12 sm:w-12"
     data-show="false"
     id="to-top-btn"
-    ><svg
+  >
+    <span class="sr-only">Back to top</span>
+    <svg
       aria-hidden="true"
       class="h-6 w-6"
       fill="none"
@@ -34,7 +35,7 @@ import BaseLayout from "./Base.astro";
 
 <script>
   const scrollBtn = document.getElementById("to-top-btn");
-  const targetHeader = document.getElementById("hero");
+  const targetHeader = document.getElementById("blog-hero");
 
   function callback(entries) {
     entries.forEach((entry) => {

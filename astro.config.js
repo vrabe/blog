@@ -12,10 +12,11 @@ import rehypeKatex from "rehype-katex";
 import remarkGithubAlerts from "./src/utils/remark-github-alerts";
 import remarkReadingTime from "./src/utils/remark-reading-time";
 import rehypeExcerpt from "./src/utils/rehype-post-excerpt";
-import { expressiveCodeOptions } from "./src/site.config";
+import { expressiveCodeOptions, siteConfig } from "./src/site.config";
 
 // https://astro.build/config
 export default defineConfig({
+  site: siteConfig.url,
   integrations: [
     expressiveCode(expressiveCodeOptions),
     icon(),
@@ -42,7 +43,7 @@ export default defineConfig({
       [
         rehypeExternalLinks,
         {
-          rel: ["noopener, noreferrer"],
+          rel: ["noreferrer", "noopener"],
           target: "_blank",
         },
       ],
@@ -56,8 +57,6 @@ export default defineConfig({
   },
   // https://docs.astro.build/en/guides/prefetch/
   prefetch: true,
-  // ! Please remember to replace the following site property with your own domain
-  site: "https://vrabe.tw/",
   vite: {
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"],
