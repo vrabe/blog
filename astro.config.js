@@ -62,7 +62,11 @@ export default defineConfig({
       exclude: ["@resvg/resvg-js"],
     },
   },
+  image: {
+    experimentalLayout: "responsive",
+  },
   experimental: {
     svg: true,
+    responsiveImages: true,
   },
 });
