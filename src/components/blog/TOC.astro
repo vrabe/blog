@@ -11,7 +11,7 @@ const toc = generateToc(headings);
 <details open class="lg:sticky lg:top-12 lg:order-2 lg:-me-[18.5rem] lg:basis-64">
   <summary class="title cursor-pointer text-lg hover:marker:text-accent">目次</summary>
   <nav class="ms-4 lg:w-full">
-    <ol class="mt-4">
+    <ol class="mt-4 lg:text-sm">
       {toc.map((heading) => <TOCHeading heading={heading} />)}
     </ol>
   </nav>
