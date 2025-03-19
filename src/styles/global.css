@@ -24,6 +24,11 @@
     --theme-accent-2: 0deg 0% 88%;
     --theme-quote: 0deg 100% 86%;
   }
+
+  :root {
+    /* text-sm font size */
+    --code-block-font-size: clamp(1rem, calc(0.98904rem + 0.05482vw), 1.0416666666666667rem);
+  }
 }
 
 @layer components {
