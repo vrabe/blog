@@ -6,8 +6,8 @@ import satori from "satori";
 import { html } from "satori-html";
 import { createHash } from "node:crypto";
 
-const PTSans = fs.readFileSync("src/assets/PTSans-Regular.ttf");
-const PTSansBold = fs.readFileSync("src/assets/PTSans-Bold.ttf");
+const Overpass = fs.readFileSync("src/assets/Overpass-Regular.ttf");
+const OverpassBold = fs.readFileSync("src/assets/Overpass-Bold.ttf");
 const Noto = fs.readFileSync("src/assets/NotoSansCJKtc-Regular.otf");
 const NotoBold = fs.readFileSync("src/assets/NotoSansCJKtc-Bold.otf");
 
@@ -15,14 +15,14 @@ const ogOptions = {
   // debug: true,
   fonts: [
     {
-      data: Buffer.from(PTSans),
-      name: "PT Sans",
+      data: Buffer.from(Overpass),
+      name: "Overpass",
       style: "normal",
       weight: 400,
     },
     {
-      data: Buffer.from(PTSansBold),
-      name: "PT Sans",
+      data: Buffer.from(OverpassBold),
+      name: "Overpass",
       style: "normal",
       weight: 700,
     },

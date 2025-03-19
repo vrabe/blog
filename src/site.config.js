@@ -56,7 +56,7 @@ export const expressiveCodeOptions = {
   styleOverrides: {
     borderRadius: "4px",
     codeFontFamily:
-      "B612 Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
+      "Reddit Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
     codeFontSize: "0.875rem",
     codeLineHeight: "1.7142857rem",
     codePaddingInline: "1rem",

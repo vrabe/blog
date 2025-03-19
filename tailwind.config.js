@@ -48,8 +48,7 @@ export default {
       fontFamily: {
         // Add any custom fonts here
         sans: [
-          "Modified Q",
-          "PT Sans",
+          "Overpass",
           "Noto Sans CJK TC",
           "儷黑 Pro",
           "LiHei Pro",
@@ -57,7 +56,7 @@ export default {
           "Microsoft JhengHei",
         ],
         serif: [...fontFamily.serif],
-        mono: ["B612 Mono", ...fontFamily.mono],
+        mono: ["Reddit Mono", ...fontFamily.mono],
       },
       transitionProperty: {
         height: "height",
