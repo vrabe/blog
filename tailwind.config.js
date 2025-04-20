@@ -115,7 +115,7 @@ export default {
               },
             },
             img: {
-              "@apply mx-auto w-auto": "",
+              "@apply mx-auto": "",
             },
             /* Table */
             "tbody tr": {
