@@ -31,8 +31,8 @@
   }
 
   :target {
-		scroll-margin-block: 5ex;
-	}
+    scroll-margin-block: 5ex;
+  }
 }
 
 @layer components {
