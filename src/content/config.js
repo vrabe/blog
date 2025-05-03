@@ -1,4 +1,5 @@
 import { defineCollection, z } from "astro:content";
+import { POSTS_PATH, DRAFTS_PATH } from "astro:env/server";
 import { glob } from "astro/loaders";
 import { TZDate } from "@date-fns/tz";
 import { siteConfig } from "@/site.config";
@@ -12,7 +13,7 @@ function removeDupsAndLowerCase(array) {
 }
 
 const blog = defineCollection({
-  loader: glob({ base: "../blog-posts/content/blog", pattern: "**/*.mdx" }),
+  loader: glob({ base: POSTS_PATH, pattern: "**/*.mdx" }),
   schema: z.object({
     title: z.string(),
     created: z.string().transform((str) => new TZDate(str, siteConfig.timezone)),
@@ -23,7 +24,7 @@ const blog = defineCollection({
 });
 
 const drafts = defineCollection({
-  loader: glob({ base: "../blog-posts/content/draft", pattern: "**/*.mdx" }),
+  loader: glob({ base: DRAFTS_PATH, pattern: "**/*.mdx" }),
   schema: z.object({
     title: z
       .string()
