@@ -63,7 +63,7 @@ export default defineConfig({
     },
   },
   image: {
-    experimentalLayout: "responsive",
+    experimentalLayout: "constrained",
   },
   env: {
     schema: {
