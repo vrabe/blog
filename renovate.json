@@ -4,5 +4,9 @@
     "config:recommended",
     "group:allNonMajor"
   ],
-  "rangeStrategy":"bump"
+  "rangeStrategy":"bump",
+  "ignoreDeps": [
+    "tailwindcss",
+    "@astrojs/tailwind"
+  ]
 }
