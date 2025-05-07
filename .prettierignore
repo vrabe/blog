@@ -9,3 +9,5 @@ src/content/blog/
 
 pnpm-lock.yaml
 dist
+
+renovate.json

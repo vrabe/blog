@@ -1,0 +1,19 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    "group:allNonMajor",
+    ":disableDependencyDashboard"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "rangeStrategy": "bump",
+  "postUpdateOptions": [
+    "pnpmDedupe"
+  ],
+  "ignoreDeps": [
+    "tailwindcss",
+    "@astrojs/tailwind"
+  ]
+}
