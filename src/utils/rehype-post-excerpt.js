@@ -1,6 +1,7 @@
 import { truncate } from "hast-util-truncate";
 import { toText as hastToText } from "hast-util-to-text";
 import { collapseWhiteSpace } from "collapse-white-space";
+import { escapeUTF8 } from "entities";
 
 function rehypeExcerpt(options) {
   const excerptLimit = options?.limit ?? 200;
@@ -10,7 +11,7 @@ function rehypeExcerpt(options) {
       size: excerptLimit,
       ellipsis: "…",
     });
-    frontmatter.excerpt = collapseWhiteSpace(hastToText(fragment));
+    frontmatter.excerpt = escapeUTF8(collapseWhiteSpace(hastToText(fragment)));
   };
 }
 
