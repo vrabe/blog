@@ -82,7 +82,7 @@ import { menuLinks, siteConfig } from "@/site.config";
     #menuOpen = false;
 
     connectedCallback() {
-      const headerEl = document.getElementById("main-header")!;
+      const headerEl = document.getElementById("main-header");
       const mobileButtonEl = this.querySelector("button");
 
       mobileButtonEl?.addEventListener("click", () => {
