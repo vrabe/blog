@@ -5,12 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
     "build": "astro build",
     "postbuild": "pagefind --site dist",
     "preview": "astro preview",
     "format": "prettier -w --cache . && prettier -w --cache **/*.astro",
-    "check": "astro check",
     "upload:s3": "./upload-s3.sh",
     "distribute": "pnpm build && pnpm upload:s3"
   },
