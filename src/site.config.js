@@ -62,7 +62,9 @@ export const expressiveCodeOptions = {
     codePaddingInline: "1rem",
     frames: {
       frameBoxShadowCssValue: "none",
+      editorActiveTabIndicatorTopColor: "hsl(var(--theme-accent))",
     },
+    uiFontFamily: "inherit",
     uiLineHeight: "inherit",
   },
   themeCssSelector(theme, { styleVariants }) {
