@@ -78,11 +78,11 @@ export default {
               borderLeftWidth: "0",
             },
             code: {
-              border: "1px dotted #666",
               borderRadius: "2px",
               fontWeight: "400",
               paddingInlineEnd: "5px",
               paddingInlineStart: "5px",
+              "@apply bg-global-text/5": "",
             },
             "code::before": {
               content: "",
@@ -92,9 +92,6 @@ export default {
             },
             kbd: {
               "@apply dark:bg-global-text": "",
-            },
-            hr: {
-              borderTopStyle: "dashed",
             },
             strong: {
               fontWeight: "700",
@@ -122,13 +119,13 @@ export default {
               borderBottomWidth: "none",
             },
             tfoot: {
-              borderTop: "1px dashed #666",
+              borderTop: "1px solid #666",
             },
             thead: {
               borderBottomWidth: "none",
             },
             "thead th": {
-              borderBottom: "1px dashed #666",
+              borderBottom: "1px solid #666",
               fontWeight: "700",
             },
             'th[align="center"], td[align="center"]': {
@@ -149,7 +146,7 @@ export default {
             "--tw-prose-bullets": theme("colors.global-text / 1"),
             "--tw-prose-code": theme("colors.global-text / 1"),
             "--tw-prose-headings": theme("colors.accent-2 / 1"),
-            "--tw-prose-hr": "0.5px dashed #666",
+            "--tw-prose-hr": "0.5px solid #666",
             "--tw-prose-links": theme("colors.global-text / 1"),
             "--tw-prose-quotes": theme("colors.quote / 1"),
             "--tw-prose-th-borders": "#666",
