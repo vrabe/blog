@@ -58,6 +58,7 @@ A content only alert:
 - ~~IMPORTANT~~
 - WARNING
 - ~~CAUTION~~
+- GENERIC
 
 ~~type~~: Style not implemented.
 
