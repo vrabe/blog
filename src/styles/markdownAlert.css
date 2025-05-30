@@ -1,9 +1,9 @@
 .markdown-alert {
-  @apply my-8 rounded-lg border-2 p-4 text-base;
+  @apply my-8 rounded-lg border-2 px-6 text-base;
 }
 
 .markdown-alert-title {
-  @apply my-[0.5em] text-base font-semibold text-accent-2;
+  @apply text-base font-semibold text-accent-2;
 }
 
 .markdown-alert .octicon {
