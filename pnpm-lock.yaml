@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@astrojs/mdx':
         specifier: ^4.3.0
-        version: 4.3.0(astro@5.8.2(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1))
+        version: 4.3.0(astro@5.9.2(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1))
       '@astrojs/rss':
         specifier: ^4.0.12
         version: 4.0.12
@@ -19,16 +19,16 @@ importers:
         version: 3.4.1
       '@astrojs/tailwind':
         specifier: ^5.1.5
-        version: 5.1.5(astro@5.8.2(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1))(tailwindcss@3.4.17)
+        version: 5.1.5(astro@5.9.2(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1))(tailwindcss@3.4.17)
       '@date-fns/tz':
         specifier: ^1.2.0
         version: 1.2.0
       '@fontsource/overpass':
-        specifier: ^5.2.5
-        version: 5.2.5
+        specifier: ^5.2.6
+        version: 5.2.6
       '@fontsource/reddit-mono':
-        specifier: ^5.2.5
-        version: 5.2.5
+        specifier: ^5.2.6
+        version: 5.2.6
       '@iconify-json/mdi':
         specifier: ^1.2.3
         version: 1.2.3
@@ -42,17 +42,17 @@ importers:
         specifier: ^0.5.16
         version: 0.5.16(tailwindcss@3.4.17)
       astro:
-        specifier: ^5.8.2
-        version: 5.8.2(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1)
+        specifier: ^5.9.2
+        version: 5.9.2(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1)
       astro-expressive-code:
         specifier: ^0.41.2
-        version: 0.41.2(astro@5.8.2(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1))
+        version: 0.41.2(astro@5.9.2(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1))
       astro-icon:
         specifier: ^1.1.5
         version: 1.1.5
       astro-matomo:
-        specifier: ^1.8.1
-        version: 1.8.1(astro@5.8.2(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1))
+        specifier: ^1.9.0
+        version: 1.9.0(astro@5.9.2(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1))
       autoprefixer:
         specifier: ^10.4.21
         version: 10.4.21(postcss@8.5.3)
@@ -63,8 +63,8 @@ importers:
         specifier: ^7.0.7
         version: 7.0.7(postcss@8.5.3)
       entities:
-        specifier: ^6.0.0
-        version: 6.0.0
+        specifier: ^6.0.1
+        version: 6.0.1
       hast-util-to-text:
         specifier: ^4.0.2
         version: 4.0.2
@@ -99,8 +99,8 @@ importers:
         specifier: ^6.0.0
         version: 6.0.0
       satori:
-        specifier: ^0.13.2
-        version: 0.13.2
+        specifier: ^0.15.2
+        version: 0.15.2
       satori-html:
         specifier: ^0.3.2
         version: 0.3.2
@@ -148,8 +148,8 @@ packages:
     peerDependencies:
       typescript: ^5.0.0
 
-  '@astrojs/compiler@2.12.0':
-    resolution: {integrity: sha512-7bCjW6tVDpUurQLeKBUN9tZ5kSv5qYrGmcn0sG0IwacL7isR2ZbyyA3AdZ4uxsuUFOS2SlgReTH7wkxO6zpqWA==}
+  '@astrojs/compiler@2.12.2':
+    resolution: {integrity: sha512-w2zfvhjNCkNMmMMOn5b0J8+OmUaBL1o40ipMvqcG6NRpdC+lKxmTi48DT8Xw0SzJ3AfmeFLB45zXZXtmbsjcgw==}
 
   '@astrojs/internal-helpers@0.6.1':
     resolution: {integrity: sha512-l5Pqf6uZu31aG+3Lv8nl/3s4DbUzdlxTWDof4pEpto6GUJNhhCbelVi9dEyurOVyqaelwmS9oSyOWOENSfgo9A==}
@@ -411,11 +411,11 @@ packages:
   '@expressive-code/plugin-text-markers@0.41.2':
     resolution: {integrity: sha512-JFWBz2qYxxJOJkkWf96LpeolbnOqJY95TvwYc0hXIHf9oSWV0h0SY268w/5N3EtQaD9KktzDE+VIVwb9jdb3nw==}
 
-  '@fontsource/overpass@5.2.5':
-    resolution: {integrity: sha512-xwxYbZXc4lDQi1z0r9LiJhHTJm4UqprdYcdIZVi7C4lVtWZOTX0nvyto6Be8wWJMeu+sHb9fzLN3byldibSF4A==}
+  '@fontsource/overpass@5.2.6':
+    resolution: {integrity: sha512-a1y3g+dw4lj4sh593ETL1Z/feY1m7r3inXvHE4Es9l6nSd9ImOAr/ydWr0C/2/awJuc7Js69uvl9k2pO6DmYfA==}
 
-  '@fontsource/reddit-mono@5.2.5':
-    resolution: {integrity: sha512-tjETGef0u1gtM/WlsNbziIRP7UG6aVXHeF6AAXV+JEZqNAaerCTM/SrP+g8rqAaFKtWOMFvxbOutLZnnu1s9uA==}
+  '@fontsource/reddit-mono@5.2.6':
+    resolution: {integrity: sha512-7crn/dUC7FUZilqZnEeGewfZn/RH7tJUXC8GT0rTY5o4gOD50Q8C94hJs4PTEQFPLs30Hv2sPcJCeTWnQXZlTw==}
 
   '@iconify-json/mdi@1.2.3':
     resolution: {integrity: sha512-O3cLwbDOK7NNDf2ihaQOH5F9JglnulNDFV7WprU2dSoZu3h3cWH//h74uQAB87brHmvFVxIOkuBX2sZSzYhScg==}
@@ -1089,13 +1089,13 @@ packages:
   astro-icon@1.1.5:
     resolution: {integrity: sha512-CJYS5nWOw9jz4RpGWmzNQY7D0y2ZZacH7atL2K9DeJXJVaz7/5WrxeyIxO8KASk1jCM96Q4LjRx/F3R+InjJrw==}
 
-  astro-matomo@1.8.1:
-    resolution: {integrity: sha512-ifSyb6Pw57cWiAPQB8Y2+mIFaKBxBMCcwmu2U1bJpTrMYTdw8bDyP1YfpzMgXdvFhXXWiOBYzgMb4TAfZTAQYg==}
+  astro-matomo@1.9.0:
+    resolution: {integrity: sha512-eOmhDHvqjrasJvhaKTSEZIMk9pW/3OcqYS6VVGOQBrEg33H1/Mk62sJuv2dxmsg3cNTDwm2rlZlw9r18KNgYnw==}
     peerDependencies:
       astro: ^2.0.0-beta.0 || ^3.0.0 || ^4.0.0 || ^5.0.0
 
-  astro@5.8.2:
-    resolution: {integrity: sha512-t0TBpBdVluA2QVmbFBwpIqmTvBwNhIz1XTIT1BWPkDkoIgsiEMf6BOZqcoGG7f4GVKkUB9bTgMOhPgU3tbJ6vQ==}
+  astro@5.9.2:
+    resolution: {integrity: sha512-K/zZlQOWMpamfLDOls5jvG7lrsjH1gkk3ESRZyZDCkVBtKHMF4LbjwCicm/iBb3mX3V/PerqRYzLbOy3/4JLCQ==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -1493,8 +1493,8 @@ packages:
     resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
     engines: {node: '>=0.12'}
 
-  entities@6.0.0:
-    resolution: {integrity: sha512-aKstq2TDOndCn4diEyp9Uq/Flu2i1GlLkc6XIDQSDMuaFE3OPW5OphLCyQ5SpSJZTb4reN+kTcYru5yIfXoRPw==}
+  entities@6.0.1:
+    resolution: {integrity: sha512-aN97NXWF6AWBTahfVOIrB/NShkzi5H7F9r1s9mD3cDj4Ko5f2qhhVoYMibXF7GlLveb/D2ioWay8lxI97Ven3g==}
     engines: {node: '>=0.12'}
 
   es-define-property@1.0.1:
@@ -2804,8 +2804,8 @@ packages:
   satori-html@0.3.2:
     resolution: {integrity: sha512-wjTh14iqADFKDK80e51/98MplTGfxz2RmIzh0GqShlf4a67+BooLywF17TvJPD6phO0Hxm7Mf1N5LtRYvdkYRA==}
 
-  satori@0.13.2:
-    resolution: {integrity: sha512-BPoExgKlkZPY1j4I2vSovo9OJALOw5siU37cm1aNcq/XWCojpFM3FHXHxby9tQ2R5ajV2fRQgouWoonQ83z+Hg==}
+  satori@0.15.2:
+    resolution: {integrity: sha512-vu/49vdc8MzV5jUchs3TIRDCOkOvMc1iJ11MrZvhg9tE4ziKIEIBjBZvies6a9sfM2vQ2gc3dXeu6rCK7AztHA==}
     engines: {node: '>=16'}
 
   sax@1.4.1:
@@ -3426,13 +3426,13 @@ snapshots:
       - prettier
       - prettier-plugin-astro
 
-  '@astrojs/compiler@2.12.0': {}
+  '@astrojs/compiler@2.12.2': {}
 
   '@astrojs/internal-helpers@0.6.1': {}
 
   '@astrojs/language-server@2.15.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.4.5)':
     dependencies:
-      '@astrojs/compiler': 2.12.0
+      '@astrojs/compiler': 2.12.2
       '@astrojs/yaml2ts': 0.2.2
       '@jridgewell/sourcemap-codec': 1.5.0
       '@volar/kit': 2.4.13(typescript@5.4.5)
@@ -3482,12 +3482,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.3.0(astro@5.8.2(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1))':
+  '@astrojs/mdx@4.3.0(astro@5.9.2(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.2
       '@mdx-js/mdx': 3.1.0(acorn@8.14.1)
       acorn: 8.14.1
-      astro: 5.8.2(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1)
+      astro: 5.9.2(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1)
       es-module-lexer: 1.7.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -3516,9 +3516,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.24.4
 
-  '@astrojs/tailwind@5.1.5(astro@5.8.2(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1))(tailwindcss@3.4.17)':
+  '@astrojs/tailwind@5.1.5(astro@5.9.2(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1))(tailwindcss@3.4.17)':
     dependencies:
-      astro: 5.8.2(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1)
+      astro: 5.9.2(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1)
       autoprefixer: 10.4.21(postcss@8.5.3)
       postcss: 8.5.3
       postcss-load-config: 4.0.2(postcss@8.5.3)
@@ -3695,9 +3695,9 @@ snapshots:
     dependencies:
       '@expressive-code/core': 0.41.2
 
-  '@fontsource/overpass@5.2.5': {}
+  '@fontsource/overpass@5.2.6': {}
 
-  '@fontsource/reddit-mono@5.2.5': {}
+  '@fontsource/reddit-mono@5.2.6': {}
 
   '@iconify-json/mdi@1.2.3':
     dependencies:
@@ -4304,9 +4304,9 @@ snapshots:
 
   astring@1.9.0: {}
 
-  astro-expressive-code@0.41.2(astro@5.8.2(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1)):
+  astro-expressive-code@0.41.2(astro@5.9.2(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1)):
     dependencies:
-      astro: 5.8.2(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1)
+      astro: 5.9.2(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1)
       rehype-expressive-code: 0.41.2
 
   astro-icon@1.1.5:
@@ -4318,13 +4318,13 @@ snapshots:
       - debug
       - supports-color
 
-  astro-matomo@1.8.1(astro@5.8.2(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1)):
+  astro-matomo@1.9.0(astro@5.9.2(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1)):
     dependencies:
-      astro: 5.8.2(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1)
+      astro: 5.9.2(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1)
 
-  astro@5.8.2(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1):
+  astro@5.9.2(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1):
     dependencies:
-      '@astrojs/compiler': 2.12.0
+      '@astrojs/compiler': 2.12.2
       '@astrojs/internal-helpers': 0.6.1
       '@astrojs/markdown-remark': 6.3.2
       '@astrojs/telemetry': 3.3.0
@@ -4826,7 +4826,7 @@ snapshots:
 
   entities@4.5.0: {}
 
-  entities@6.0.0: {}
+  entities@6.0.1: {}
 
   es-define-property@1.0.1: {}
 
@@ -6059,7 +6059,7 @@ snapshots:
 
   parse5@7.3.0:
     dependencies:
-      entities: 6.0.0
+      entities: 6.0.1
 
   path-browserify@1.0.1: {}
 
@@ -6298,7 +6298,7 @@ snapshots:
 
   prettier-plugin-astro@0.14.1:
     dependencies:
-      '@astrojs/compiler': 2.12.0
+      '@astrojs/compiler': 2.12.2
       prettier: 3.5.3
       sass-formatter: 0.7.9
 
@@ -6594,7 +6594,7 @@ snapshots:
     dependencies:
       ultrahtml: 1.6.0
 
-  satori@0.13.2:
+  satori@0.15.2:
     dependencies:
       '@shuding/opentype.js': 1.4.0-beta.0
       css-background-parser: 0.1.0
