@@ -63,15 +63,13 @@ export default defineConfig({
     },
   },
   image: {
-    experimentalLayout: "constrained",
+    layout: "constrained",
+    responsiveStyles: true,
   },
   env: {
     schema: {
       POSTS_PATH: envField.string({ context: "server", access: "secret" }),
       DRAFTS_PATH: envField.string({ context: "server", access: "secret" }),
     },
-  },
-  experimental: {
-    responsiveImages: true,
   },
 });
