@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@astrojs/mdx':
         specifier: ^4.3.0
-        version: 4.3.0(astro@5.10.0(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1))
+        version: 4.3.0(astro@5.10.1(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1))
       '@astrojs/rss':
         specifier: ^4.0.12
         version: 4.0.12
@@ -19,7 +19,7 @@ importers:
         version: 3.4.1
       '@astrojs/tailwind':
         specifier: ^5.1.5
-        version: 5.1.5(astro@5.10.0(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1))(tailwindcss@3.4.17)
+        version: 5.1.5(astro@5.10.1(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1))(tailwindcss@3.4.17)
       '@date-fns/tz':
         specifier: ^1.2.0
         version: 1.2.0
@@ -42,17 +42,17 @@ importers:
         specifier: ^0.5.16
         version: 0.5.16(tailwindcss@3.4.17)
       astro:
-        specifier: ^5.10.0
-        version: 5.10.0(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1)
+        specifier: ^5.10.1
+        version: 5.10.1(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1)
       astro-expressive-code:
         specifier: ^0.41.2
-        version: 0.41.2(astro@5.10.0(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1))
+        version: 0.41.2(astro@5.10.1(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1))
       astro-icon:
         specifier: ^1.1.5
         version: 1.1.5
       astro-matomo:
         specifier: ^1.9.0
-        version: 1.9.0(astro@5.10.0(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1))
+        version: 1.9.0(astro@5.10.1(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1))
       autoprefixer:
         specifier: ^10.4.21
         version: 10.4.21(postcss@8.5.3)
@@ -119,16 +119,16 @@ importers:
     devDependencies:
       '@astrojs/check':
         specifier: ^0.9.4
-        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.4.5)
+        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.6.2)(typescript@5.4.5)
       prettier:
-        specifier: ^3.5.3
-        version: 3.5.3
+        specifier: ^3.6.2
+        version: 3.6.2
       prettier-plugin-astro:
         specifier: ^0.14.1
         version: 0.14.1
       prettier-plugin-tailwindcss:
         specifier: ^0.6.13
-        version: 0.6.13(prettier-plugin-astro@0.14.1)(prettier@3.5.3)
+        version: 0.6.13(prettier-plugin-astro@0.14.1)(prettier@3.6.2)
 
 packages:
 
@@ -1094,8 +1094,8 @@ packages:
     peerDependencies:
       astro: ^2.0.0-beta.0 || ^3.0.0 || ^4.0.0 || ^5.0.0
 
-  astro@5.10.0:
-    resolution: {integrity: sha512-g/t54kVzQnFVijs+GbbbX/NBAFTl/3yNAEA/AQYq4FumLLVv7n4BIF+jKhcPGn9iFGyT1Cjvr7KB/qYyNvHEIg==}
+  astro@5.10.1:
+    resolution: {integrity: sha512-DJVmt+51jU1xmgmAHCDwuUgcG/5aVFSU+tcX694acAZqPVt8EMUAmUZcJDX36Z7/EztnPph9HR3pm72jS2EgHQ==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2628,8 +2628,8 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
 
-  prettier@3.5.3:
-    resolution: {integrity: sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw==}
+  prettier@3.6.2:
+    resolution: {integrity: sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -3415,9 +3415,9 @@ snapshots:
 
   '@antfu/utils@8.1.1': {}
 
-  '@astrojs/check@0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.4.5)':
+  '@astrojs/check@0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.6.2)(typescript@5.4.5)':
     dependencies:
-      '@astrojs/language-server': 2.15.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.4.5)
+      '@astrojs/language-server': 2.15.4(prettier-plugin-astro@0.14.1)(prettier@3.6.2)(typescript@5.4.5)
       chokidar: 4.0.3
       kleur: 4.1.5
       typescript: 5.4.5
@@ -3430,7 +3430,7 @@ snapshots:
 
   '@astrojs/internal-helpers@0.6.1': {}
 
-  '@astrojs/language-server@2.15.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.4.5)':
+  '@astrojs/language-server@2.15.4(prettier-plugin-astro@0.14.1)(prettier@3.6.2)(typescript@5.4.5)':
     dependencies:
       '@astrojs/compiler': 2.12.2
       '@astrojs/yaml2ts': 0.2.2
@@ -3444,14 +3444,14 @@ snapshots:
       volar-service-css: 0.0.62(@volar/language-service@2.4.13)
       volar-service-emmet: 0.0.62(@volar/language-service@2.4.13)
       volar-service-html: 0.0.62(@volar/language-service@2.4.13)
-      volar-service-prettier: 0.0.62(@volar/language-service@2.4.13)(prettier@3.5.3)
+      volar-service-prettier: 0.0.62(@volar/language-service@2.4.13)(prettier@3.6.2)
       volar-service-typescript: 0.0.62(@volar/language-service@2.4.13)
       volar-service-typescript-twoslash-queries: 0.0.62(@volar/language-service@2.4.13)
       volar-service-yaml: 0.0.62(@volar/language-service@2.4.13)
       vscode-html-languageservice: 5.4.0
       vscode-uri: 3.1.0
     optionalDependencies:
-      prettier: 3.5.3
+      prettier: 3.6.2
       prettier-plugin-astro: 0.14.1
     transitivePeerDependencies:
       - typescript
@@ -3482,12 +3482,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.3.0(astro@5.10.0(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1))':
+  '@astrojs/mdx@4.3.0(astro@5.10.1(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.2
       '@mdx-js/mdx': 3.1.0(acorn@8.14.1)
       acorn: 8.14.1
-      astro: 5.10.0(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1)
+      astro: 5.10.1(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1)
       es-module-lexer: 1.7.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -3516,9 +3516,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.24.4
 
-  '@astrojs/tailwind@5.1.5(astro@5.10.0(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1))(tailwindcss@3.4.17)':
+  '@astrojs/tailwind@5.1.5(astro@5.10.1(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1))(tailwindcss@3.4.17)':
     dependencies:
-      astro: 5.10.0(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1)
+      astro: 5.10.1(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1)
       autoprefixer: 10.4.21(postcss@8.5.3)
       postcss: 8.5.3
       postcss-load-config: 4.0.2(postcss@8.5.3)
@@ -4304,9 +4304,9 @@ snapshots:
 
   astring@1.9.0: {}
 
-  astro-expressive-code@0.41.2(astro@5.10.0(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1)):
+  astro-expressive-code@0.41.2(astro@5.10.1(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1)):
     dependencies:
-      astro: 5.10.0(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1)
+      astro: 5.10.1(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1)
       rehype-expressive-code: 0.41.2
 
   astro-icon@1.1.5:
@@ -4318,11 +4318,11 @@ snapshots:
       - debug
       - supports-color
 
-  astro-matomo@1.9.0(astro@5.10.0(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1)):
+  astro-matomo@1.9.0(astro@5.10.1(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1)):
     dependencies:
-      astro: 5.10.0(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1)
+      astro: 5.10.1(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1)
 
-  astro@5.10.0(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1):
+  astro@5.10.1(@types/node@22.15.15)(jiti@2.4.2)(rollup@4.40.2)(typescript@5.4.5)(yaml@2.7.1):
     dependencies:
       '@astrojs/compiler': 2.12.2
       '@astrojs/internal-helpers': 0.6.1
@@ -6299,19 +6299,19 @@ snapshots:
   prettier-plugin-astro@0.14.1:
     dependencies:
       '@astrojs/compiler': 2.12.2
-      prettier: 3.5.3
+      prettier: 3.6.2
       sass-formatter: 0.7.9
 
-  prettier-plugin-tailwindcss@0.6.13(prettier-plugin-astro@0.14.1)(prettier@3.5.3):
+  prettier-plugin-tailwindcss@0.6.13(prettier-plugin-astro@0.14.1)(prettier@3.6.2):
     dependencies:
-      prettier: 3.5.3
+      prettier: 3.6.2
     optionalDependencies:
       prettier-plugin-astro: 0.14.1
 
   prettier@2.8.7:
     optional: true
 
-  prettier@3.5.3: {}
+  prettier@3.6.2: {}
 
   prismjs@1.30.0: {}
 
@@ -7029,12 +7029,12 @@ snapshots:
     optionalDependencies:
       '@volar/language-service': 2.4.13
 
-  volar-service-prettier@0.0.62(@volar/language-service@2.4.13)(prettier@3.5.3):
+  volar-service-prettier@0.0.62(@volar/language-service@2.4.13)(prettier@3.6.2):
     dependencies:
       vscode-uri: 3.1.0
     optionalDependencies:
       '@volar/language-service': 2.4.13
-      prettier: 3.5.3
+      prettier: 3.6.2
 
   volar-service-typescript-twoslash-queries@0.0.62(@volar/language-service@2.4.13):
     dependencies:
