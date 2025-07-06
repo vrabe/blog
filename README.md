@@ -2,7 +2,7 @@
 
 My blog: <https://vrabe.tw>
 
-The site is modified from [chrismwilliams/astro-theme-cactus](https://github.com/chrismwilliams/astro-theme-cactus) and updated from it regularly. (Currently updated to v6.1.0)
+The site is modified from [chrismwilliams/astro-theme-cactus](https://github.com/chrismwilliams/astro-theme-cactus) and updated from it regularly. (Currently updated to v6.7.0)
 
 It's not designed to be a template. If you want to use it, don't deploy it directly. You need to edit config and do other necessary changes first.
 
@@ -14,6 +14,7 @@ It's not designed to be a template. If you want to use it, don't deploy it direc
 - Frontmatter fields are different
 - Admonition implementation is different
 - Some style changes
+- And more...
 
 ## Cheat Sheet
 
