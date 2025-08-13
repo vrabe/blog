@@ -15,5 +15,8 @@
   "ignoreDeps": [
     "tailwindcss",
     "@astrojs/tailwind"
-  ]
+  ],
+  "vulnerabilityAlerts": {
+    "enabled": false
+  }
 }
