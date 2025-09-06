@@ -2,6 +2,8 @@
 import { siteConfig } from "@/site.config";
 import { pageMetadata } from "@/stores/pageMetadata";
 
+import AdsCode from "@/components/AdsCode.astro";
+
 import "@/styles/global.css";
 
 import "@fontsource/overpass/400.css";
@@ -113,15 +115,7 @@ if (isPost) {
 {/* No Index for tag pages */}
 {isTag && <meta content="noindex" name="robots" />}
 
-{/* Adsense */}
-{
-  !isTag && (
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2628442340171104"
-      crossorigin="anonymous"
-    />
-  )
-}
+{/* Google Publisher Tag */}
+{!isTag && <AdsCode />}
 
 <meta content={Astro.generator} name="generator" />
