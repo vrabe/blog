@@ -6,7 +6,7 @@ import BackToTopButton from "@/components/blog/BackToTopButton.astro";
 <BaseLayout>
   <article class="grow break-words" data-pagefind-body>
     <div id="blog-hero" class="mb-12"><slot name="hero" /></div>
-    <div class="flex flex-col gap-10 lg:flex-row lg:items-start">
+    <div class="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
       <slot name="toc" />
       <slot />
     </div>
