@@ -13,7 +13,7 @@
     "distribute": "pnpm build && pnpm upload:s3"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.6",
+    "@astrojs/mdx": "^4.3.7",
     "@astrojs/rss": "^4.0.12",
     "@astrojs/sitemap": "^3.6.0",
     "@astrojs/tailwind": "^5.1.5",
@@ -24,7 +24,7 @@
     "@pagefind/default-ui": "^1.4.0",
     "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/typography": "^0.5.19",
-    "astro": "^5.14.1",
+    "astro": "^5.14.3",
     "astro-expressive-code": "^0.41.3",
     "astro-icon": "^1.1.5",
     "astro-matomo": "^1.9.0",
@@ -34,7 +34,7 @@
     "entities": "^7.0.0",
     "hast-util-to-text": "^4.0.2",
     "hast-util-truncate": "^2.0.0",
-    "katex": "^0.16.22",
+    "katex": "^0.16.23",
     "mdast-util-to-string": "^4.0.0",
     "nanostores": "^1.0.1",
     "pagefind": "^1.4.0",
