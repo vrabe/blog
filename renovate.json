@@ -12,9 +12,15 @@
   "postUpdateOptions": [
     "pnpmDedupe"
   ],
-  "ignoreDeps": [
-    "tailwindcss",
-    "@astrojs/tailwind"
+  "packageRules": [
+    {
+      "matchPackageNames": ["tailwindcss"],
+      "allowedVersions": "<4"
+    },
+    {
+      "matchPackageNames": ["@astrojs/tailwind"],
+      "allowedVersions": "<6"
+    }
   ],
   "vulnerabilityAlerts": {
     "enabled": false
