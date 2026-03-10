@@ -18,15 +18,23 @@
       "allowedVersions": "<4"
     },
     {
-      "matchPackageNames": ["@astrojs/tailwind"],
+      "matchPackageNames": ["@astrojs/mdx"],
+      "allowedVersions": "<5"
+    },
+    {
+      "matchPackageNames": ["@astrojs/tailwind", "astro"],
       "allowedVersions": "<6"
+    },
+    {
+      "matchPackageNames": ["@astrojs/sitemap"],
+      "allowedVersions": "<=3.7.0"
+    },
+    {
+      "matchPackageNames": ["@astrojs/rss"],
+      "allowedVersions": "<=4.0.15"
     }
   ],
   "vulnerabilityAlerts": {
     "enabled": false
-  },
-  "schedule": [
-    "* 0 31 * *"
-  ],
-  "updateNotScheduled": false
+  }
 }
