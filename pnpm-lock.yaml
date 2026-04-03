@@ -65,6 +65,9 @@ importers:
       entities:
         specifier: ^8.0.0
         version: 8.0.0
+      github-slugger:
+        specifier: ^2.0.0
+        version: 2.0.0
       hast-util-to-text:
         specifier: ^4.0.2
         version: 4.0.2

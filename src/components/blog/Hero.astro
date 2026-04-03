@@ -1,4 +1,5 @@
 ---
+import { slug } from "github-slugger";
 import FormattedDate from "@/components/FormattedDate.astro";
 
 const {
@@ -57,7 +58,7 @@ const dateTimeOptions = {
         <>
           {/* prettier-ignore */}
           <span class="contents">
-						<a class="cactus-link inline-block before:content-['#']" href={`/blog/tags/${tag}/`}><span class="sr-only">View more blogs with the tag&nbsp;</span><span data-pagefind-filter="tag">{tag}</span>
+						<a class="cactus-link inline-block before:content-['#']" href={`/blog/tags/${slug(tag)}/`}><span class="sr-only">View more blogs with the tag&nbsp;</span><span data-pagefind-filter="tag">{tag}</span>
 						</a>{i < data.tags.length - 1 && ", "}
 					</span>
         </>

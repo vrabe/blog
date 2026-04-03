@@ -1,4 +1,5 @@
 ---
+import { slug } from "github-slugger";
 import { getAllPosts, getUniqueTags } from "@/data/post";
 import TagPostList from "@/layouts/page/TagPostList.astro";
 import { collectionDateSort } from "@/utils/date";
@@ -16,13 +17,14 @@ export const getStaticPaths = async ({ paginate }) => {
     const nextPageExists = filterPosts.length > siteConfig.postsPerPage;
 
     return {
-      params: { tag },
+      params: { tag: slug(tag) },
       props: {
+        tag,
         page: {
           currentPage: 1,
           url: {
             ...(nextPageExists && {
-              next: `/blog/tags/${tag}/page/2`,
+              next: `/blog/tags/${slug(tag)}/page/2`,
             }),
           },
           data: firstPagePostsByDate,
@@ -32,8 +34,7 @@ export const getStaticPaths = async ({ paginate }) => {
   });
 };
 
-const { page } = Astro.props;
-const { tag } = Astro.params;
+const { tag, page } = Astro.props;
 
 pageMetadata.set({
   description: `檢視所有含有 ${tag} 標籤的文章`,

@@ -1,4 +1,5 @@
 ---
+import { slug } from "github-slugger";
 import Pagination from "@/components/Paginator.astro";
 import PostPreview from "@/components/blog/PostPreview.astro";
 import PageLayout from "@/layouts/Base.astro";
@@ -9,7 +10,7 @@ const paginationProps = {
   ...(page.url.prev && {
     prevUrl: {
       text: `← 上一頁`,
-      url: page.currentPage === 2 ? `/blog/tags/${tag}/` : page.url.prev + "/",
+      url: page.currentPage === 2 ? `/blog/tags/${slug(tag)}/` : page.url.prev + "/",
     },
   }),
   ...(page.url.next && {
@@ -28,8 +29,8 @@ const paginationProps = {
     <span aria-hidden="true" class="me-3 ms-2 text-xl">→</span>
     <span aria-hidden="true" class="text-xl">#{tag}</span>
   </div>
-  <section aria-labelledby={`tags-${tag}`}>
-    <h2 id={`tags-${tag}`} class="sr-only">Post List</h2>
+  <section aria-labelledby={`tags-${slug(tag)}`}>
+    <h2 id={`tags-${slug(tag)}`} class="sr-only">Post List</h2>
     <ul class="space-y-6">
       {
         page.data.map((p) => (
