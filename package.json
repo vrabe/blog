@@ -30,7 +30,7 @@
     "astro-matomo": "^1.12.0",
     "autoprefixer": "^10.5.4",
     "collapse-white-space": "^2.1.0",
-    "cssnano": "^8.0.10",
+    "cssnano": "^9.0.2",
     "entities": "^8.0.0",
     "github-slugger": "^2.0.0",
     "hast-util-to-text": "^4.0.2",
